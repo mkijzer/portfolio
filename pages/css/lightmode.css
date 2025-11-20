@@ -1,0 +1,68 @@
+/* css/lightmode.css */
+
+/* Light mode variables */
+:root.light-mode {
+  --primary-bg: rgba(255, 255, 255, 0.03); /* Glass effect */
+  --text-color: hsl(0, 0%, 29%); /* Charcoal gray #4A4A4A */
+  --accent-color: hsl(22.99, 100%, 58.04%); /* Orange */
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --text-link: hsl(22.99, 100%, 58.04%);
+  --link-hover: hsl(22.99, 100%, 68.04%);
+}
+
+/* Light mode glassmorphism for cards - matching exact style */
+.light-mode .card,
+.light-mode .project-card,
+.light-mode .projectcard,
+.light-mode .contact-section,
+.light-mode .page-header,
+.light-mode .sidebar {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: none;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Tile flip animation for light mode */
+.light-mode .about-grid .card,
+.light-mode .info-cards .card {
+  position: relative;
+  transform-style: preserve-3d;
+  animation: flipTile 0.3s ease-in-out forwards;
+}
+
+/* Ensure content is visible and styled */
+.light-mode .about-grid .card > *,
+.light-mode .info-cards .card > * {
+  position: relative;
+  z-index: 1;
+  color: var(--text-color);
+  backface-visibility: visible;
+}
+
+/* Flip animation */
+@keyframes flipTile {
+  0% {
+    transform: perspective(500px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(500px) rotateY(180deg);
+  }
+}
+
+/* Sequential delay for wave effect */
+.light-mode .about-grid .card:nth-child(1),
+.light-mode .info-cards .card:nth-child(1) {
+  animation-delay: 0s;
+}
+.light-mode .about-grid .card:nth-child(2),
+.light-mode .info-cards .card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.light-mode .info-cards .card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.light-mode .info-cards .card:nth-child(4) {
+  animation-delay: 0.3s;
+}

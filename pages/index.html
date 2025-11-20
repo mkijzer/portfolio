@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mike's Portfolio</title>
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/darkmode.css" />
+    <link rel="stylesheet" href="css/lightmode.css" />
+  </head>
+  <body>
+    <div class="portfolio-layout">
+      <nav class="sidebar glass">
+        <div class="nav-header">
+          <img
+            src="../Images/profilePicture.png"
+            alt="Mike's profile picture"
+            class="profile-picture"
+          />
+          <span class="profile-name">Mike</span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#dashboard" class="nav-link active">Portfolio</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#videos" class="nav-link">Videos</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="mode-toggle">
+          <svg class="mode-icon" width="24" height="24" viewBox="0 0 24 24">
+            <path
+              class="sun"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M12 5a7 7 0 100 14 7 7 0 000-14z"
+              fill="none"
+              stroke="hsl(22.99, 100%, 58.04%)"
+              stroke-width="2"
+            />
+            <path
+              class="moon"
+              d="M12 3a9 9 0 009 9c0-4.97-4.03-9-9-9z"
+              fill="hsl(22.99, 100%, 58.04%)"
+              opacity="0"
+            />
+          </svg>
+        </button>
+      </nav>
+      <main class="main-content">
+        <header class="page-header glass">
+          <h1>
+            <span class="dynamic-title"></span><span class="cursor"> | </span>
+          </h1>
+        </header>
+        <section class="about-grid">
+          <article class="profile-card card glass">
+            <h2>Who Am I?</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consequatur alias facere atque neque minus cupiditate ad doloribus
+              provident qui sunt!
+            </p>
+            <button>learn more about me</button>
+          </article>
+          <div class="info-cards">
+            <article class="card glass">
+              <h2>Certified</h2>
+              <p>front-end developer</p>
+              <p>&</p>
+              <p>backend developer</p>
+            </article>
+            <article class="card glass">
+              <h2>10+</h2>
+              <p>projects in 2 years</p>
+            </article>
+            <article class="card glass">
+              <h2>Skills</h2>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+                <li>React</li>
+                <li>Node.JS</li>
+              </ul>
+            </article>
+            <article class="card glass">
+              <div class="cube-container">
+                <div class="cube">
+                  <div class="side front">Front</div>
+                  <div class="side back">Back</div>
+                  <div class="side top">Top</div>
+                  <div class="side bottom">Bottom</div>
+                  <div class="side left">Left</div>
+                  <div class="side right">Right</div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section class="projectcard glass">
+          <h2>Featured Projects</h2>
+          <button>view all</button>
+          <div class="project-grid">
+            <article class="project-card">
+              <img
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=160&h=160&fit=crop"
+                alt="E-commerce Platform"
+                class="project-card-image"
+              />
+              <div class="project-card-content">
+                <h3 class="project-card-title">E-commerce Platform</h3>
+                <a
+                  href="https://github.com/mike/ecommerce-platform"
+                  class="project-card-link"
+                  target="_blank"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                    />
+                  </svg>
+                  View on GitHub
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=160&h=160&fit=crop"
+                alt="Task Manager"
+                class="project-card-image"
+              />
+              <div class="project-card-content">
+                <h3 class="project-card-title">Task Manager</h3>
+                <a
+                  href="https://github.com/mike/task-manager"
+                  class="project-card-link"
+                  target="_blank"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                    />
+                  </svg>
+                  View on GitHub
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img
+                src="https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?w=160&h=160&fit=crop"
+                alt="Weather Dashboard"
+                class="project-card-image"
+              />
+              <div class="project-card-content">
+                <h3 class="project-card-title">Weather Dashboard</h3>
+                <a
+                  href="https://github.com/mike/weather-dashboard"
+                  class="project-card-link"
+                  target="_blank"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                    />
+                  </svg>
+                  View on GitHub
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img
+                src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=160&h=160&fit=crop"
+                alt="Analytics Dashboard"
+                class="project-card-image"
+              />
+              <div class="project-card-content">
+                <h3 class="project-card-title">Analytics Dashboard</h3>
+                <a
+                  href="https://github.com/mike/analytics-dashboard"
+                  class="project-card-link"
+                  target="_blank"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                    />
+                  </svg>
+                  View on GitHub
+                </a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="contact-section glass">
+          <div class="contact-header" onclick="toggleContact()">
+            <h2>Contact</h2>
+            <button class="contact-toggle" aria-label="Toggle contact form">
+              <svg
+                class="contact-arrow"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M6 9l6 6 6-6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div class="contact-form-container" id="contactForm">
+            <form class="contact-form">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>

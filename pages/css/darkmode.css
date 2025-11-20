@@ -1,0 +1,54 @@
+/* css/darkmode.css */
+
+/* Dark mode variables */
+:root {
+  --primary-bg: hsl(0, 0%, 20%);
+  --text-color: hsl(0, 0%, 96%); /* Whitesmoke */
+  --accent-color: hsl(22.99, 100%, 58.04%);
+  --shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  --text-link: hsl(22.99, 100%, 58.04%);
+  --link-hover: hsl(22.99, 100%, 68.04%);
+}
+
+/* Apply dark mode styles to cards */
+body:not(.light-mode) .about-grid .card,
+body:not(.light-mode) .info-cards .card {
+  position: relative;
+  transform-style: preserve-3d;
+  animation: flipTileBack 0.3s ease-in-out forwards;
+}
+
+/* Ensure content is visible and styled */
+body:not(.light-mode) .about-grid .card > *,
+body:not(.light-mode) .info-cards .card > * {
+  position: relative;
+  z-index: 1;
+  color: var(--text-color);
+  backface-visibility: visible;
+}
+
+/* Reverse flip animation */
+@keyframes flipTileBack {
+  0% {
+    transform: perspective(500px) rotateY(180deg);
+  }
+  100% {
+    transform: perspective(500px) rotateY(0deg);
+  }
+}
+
+/* Sequential delay for wave effect */
+body:not(.light-mode) .about-grid .card:nth-child(1),
+body:not(.light-mode) .info-cards .card:nth-child(1) {
+  animation-delay: 0s;
+}
+body:not(.light-mode) .about-grid .card:nth-child(2),
+body:not(.light-mode) .info-cards .card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+body:not(.light-mode) .info-cards .card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+body:not(.light-mode) .info-cards .card:nth-child(4) {
+  animation-delay: 0.3s;
+}
