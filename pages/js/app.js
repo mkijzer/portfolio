@@ -49,7 +49,7 @@ class PortfolioApp {
   }
 
   setupNavigation() {
-    const currentHash = window.location.hash || "#portfolio";
+    const currentHash = "#portfolio"; // Always default to portfolio
     const allLinks = document.querySelectorAll(".nav-link");
 
     allLinks.forEach((link) => {
@@ -71,9 +71,11 @@ class PortfolioApp {
         }
       });
 
-      // Set initial active state
-      if (link.getAttribute("href") === currentHash) {
+      // Set initial active state - only Portfolio should be active
+      if (link.getAttribute("href") === "#portfolio") {
         link.classList.add("active");
+      } else {
+        link.classList.remove("active");
       }
     });
   }

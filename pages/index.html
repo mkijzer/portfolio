@@ -21,9 +21,8 @@
           <span class="profile-name">Mike</span>
         </div>
         <ul class="nav-links">
-          <li><a href="#dashboard" class="nav-link active">Portfolio</a></li>
+          <li><a href="#portfolio" class="nav-link active">Portfolio</a></li>
           <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#videos" class="nav-link">Videos</a></li>
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
@@ -51,7 +50,7 @@
             <span class="dynamic-title"></span><span class="cursor"> | </span>
           </h1>
         </header>
-        <section class="about-grid">
+        <section id="portfolio" class="about-grid">
           <article class="profile-card card glass">
             <h2>Who Am I?</h2>
             <p>
@@ -64,9 +63,11 @@
           <div class="info-cards">
             <article class="card glass">
               <h2>Certified</h2>
-              <p>front-end developer</p>
-              <p>&</p>
-              <p>backend developer</p>
+              <div class="certification-text">
+                <span class="cert-role">front-end developer</span>
+                <span class="cert-connector">&</span>
+                <span class="cert-role">backend developer</span>
+              </div>
             </article>
             <article class="card glass">
               <h2>10+</h2>
@@ -96,7 +97,40 @@
             </article>
           </div>
         </section>
-        <section class="projectcard glass">
+
+        <section id="about" class="about-section">
+          <div class="about-container glass">
+            <h2>About Me</h2>
+            <div class="about-content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consequatur alias facere atque neque minus cupiditate ad
+                doloribus provident qui sunt! Sed ut perspiciatis unde omnis
+                iste natus error sit voluptatem accusantium doloremque
+                laudantium.
+              </p>
+              <p>
+                Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis
+                et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
+                ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+                fugit.
+              </p>
+              <div class="about-skills">
+                <h3>My Skills</h3>
+                <ul>
+                  <li>HTML & CSS</li>
+                  <li>JavaScript (ES6+)</li>
+                  <li>React & Node.js</li>
+                  <li>Full-stack Development</li>
+                  <li>UI/UX Design</li>
+                  <li>Problem Solving</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects" class="projectcard glass">
           <h2>Featured Projects</h2>
           <button>view all</button>
           <div class="project-grid">
@@ -214,7 +248,7 @@
           </div>
         </section>
 
-        <section class="contact-section glass">
+        <section id="contact" class="contact-section glass">
           <div class="contact-header" onclick="toggleContact()">
             <h2>Contact</h2>
             <button class="contact-toggle" aria-label="Toggle contact form">
@@ -267,8 +301,15 @@
             </form>
           </div>
         </section>
+
+        <footer class="site-footer glass">
+          <div class="footer-content">
+            <p>Additional content can be added here</p>
+          </div>
+        </footer>
       </main>
     </div>
+
     <script type="module" src="js/app.js"></script>
   </body>
 </html>
