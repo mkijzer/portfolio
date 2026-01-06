@@ -50,37 +50,65 @@
             <span class="dynamic-title"></span><span class="cursor"> | </span>
           </h1>
         </header>
+
         <section id="portfolio" class="about-grid">
+          <!-- Profile Card with Front/Back Content -->
           <article class="profile-card card glass">
-            <h2>Who Am I?</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consequatur alias facere atque neque minus cupiditate ad doloribus
-              provident qui sunt!
-            </p>
-            <button>learn more about me</button>
+            <!-- Front Side - Main Introduction -->
+            <div class="intro-text">
+              <h2>Full-stack Developer & Digital Craftsman</h2>
+              <p>
+                Building tomorrow's web experiences with modern technologies and
+                creative problem-solving.
+              </p>
+            </div>
+
+            <!-- Call-to-Action Buttons -->
+            <div class="cta-buttons">
+              <button class="btn-primary">Hire Me</button>
+              <button class="btn-secondary">Learn More</button>
+            </div>
+
+            <!-- Back Side - Detailed Bio (Hidden by default) -->
+            <div class="card-back">
+              <div class="bio-content">
+                <h3>About Mike</h3>
+                <div class="bio-points">
+                  <div class="bio-item" data-label="Experience">
+                    Self-taught developer with 2+ years building modern web
+                    applications
+                  </div>
+                  <div class="bio-item" data-label="Focus">
+                    React, Node.js, and responsive design
+                  </div>
+                  <div class="bio-item" data-label="Passion">
+                    Creating clean, efficient code and learning new technologies
+                  </div>
+                </div>
+                <button class="btn-back">Back to Overview</button>
+              </div>
+            </div>
           </article>
           <div class="info-cards">
             <article class="card glass">
               <h2>Certified</h2>
               <div class="certification-text">
-                <span class="cert-role">front-end developer</span>
-                <span class="cert-connector">&</span>
-                <span class="cert-role">backend developer</span>
+                <span class="cert-role">front-end & back-end developer</span>
+                <!-- <span class="cert-connector">&</span>
+                <span class="cert-role">backend developer</span> -->
               </div>
             </article>
             <article class="card glass">
-              <h2>10+</h2>
-              <p>projects in 2 years</p>
+              <h2>Selftaught</h2>
+              <p>passion for learning</p>
             </article>
             <article class="card glass">
-              <h2>Skills</h2>
+              <h2>Modern Stack</h2>
               <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Javascript</li>
                 <li>React</li>
-                <li>Node.JS</li>
+                <li>Node.js</li>
+                <li>Prisma</li>
+                <li>Responsive Design</li>
               </ul>
             </article>
             <article class="card glass">
@@ -100,14 +128,21 @@
 
         <section id="about" class="about-section">
           <div class="about-container glass">
-            <h2>About Me</h2>
+            <h2>Who Am I?</h2>
             <div class="about-content">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consequatur alias facere atque neque minus cupiditate ad
-                doloribus provident qui sunt! Sed ut perspiciatis unde omnis
-                iste natus error sit voluptatem accusantium doloremque
-                laudantium.
+                I’m a full-stack web developer who thrives on building
+                practical, high-performance digital experiences. I handle both
+                front-end and back-end development, turning clean designs into
+                fully functional websites and apps. I focus on responsive
+                layouts, smooth interactions, and maintainable code—making sure
+                everything not only works but feels effortless for users. I like
+                to combine creativity with efficiency. From precise CSS
+                animations and layout tweaks to solid back-end logic, I build
+                websites that are both visually sharp and technically strong.
+                I’m always exploring modern tools and techniques, from vanilla
+                JS to advanced frameworks, to keep projects fast, scalable, and
+                future-proof.
               </p>
               <p>
                 Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis
@@ -122,7 +157,7 @@
                   <li>JavaScript (ES6+)</li>
                   <li>React & Node.js</li>
                   <li>Full-stack Development</li>
-                  <li>UI/UX Design</li>
+
                   <li>Problem Solving</li>
                 </ul>
               </div>
@@ -228,6 +263,118 @@
                 <h3 class="project-card-title">Analytics Dashboard</h3>
                 <a
                   href="https://github.com/mike/analytics-dashboard"
+                  class="project-card-link"
+                  target="_blank"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                    />
+                  </svg>
+                  View on GitHub
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img
+                src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=160&h=160&fit=crop"
+                alt="Social Media App"
+                class="project-card-image"
+              />
+              <div class="project-card-content">
+                <h3 class="project-card-title">Social Media App</h3>
+                <a
+                  href="https://github.com/mike/social-media-app"
+                  class="project-card-link"
+                  target="_blank"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                    />
+                  </svg>
+                  View on GitHub
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img
+                src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=160&h=160&fit=crop"
+                alt="Recipe Finder"
+                class="project-card-image"
+              />
+              <div class="project-card-content">
+                <h3 class="project-card-title">Recipe Finder</h3>
+                <a
+                  href="https://github.com/mike/recipe-finder"
+                  class="project-card-link"
+                  target="_blank"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                    />
+                  </svg>
+                  View on GitHub
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img
+                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=160&h=160&fit=crop"
+                alt="Music Player"
+                class="project-card-image"
+              />
+              <div class="project-card-content">
+                <h3 class="project-card-title">Music Player</h3>
+                <a
+                  href="https://github.com/mike/music-player"
+                  class="project-card-link"
+                  target="_blank"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                    />
+                  </svg>
+                  View on GitHub
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img
+                src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=160&h=160&fit=crop"
+                alt="Fitness Tracker"
+                class="project-card-image"
+              />
+              <div class="project-card-content">
+                <h3 class="project-card-title">Fitness Tracker</h3>
+                <a
+                  href="https://github.com/mike/fitness-tracker"
                   class="project-card-link"
                   target="_blank"
                 >

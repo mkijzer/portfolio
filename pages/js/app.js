@@ -13,6 +13,7 @@ class PortfolioApp {
     this.setupTitleAnimation();
     this.setupContactForm();
     this.loadSavedTheme();
+    this.setupCardFlip();
   }
 
   setupThemeToggle() {
@@ -49,7 +50,7 @@ class PortfolioApp {
   }
 
   setupNavigation() {
-    const currentHash = "#portfolio"; // Always default to portfolio
+    const currentHash = window.location.hash || "#portfolio";
     const allLinks = document.querySelectorAll(".nav-link");
 
     allLinks.forEach((link) => {
@@ -71,11 +72,9 @@ class PortfolioApp {
         }
       });
 
-      // Set initial active state - only Portfolio should be active
-      if (link.getAttribute("href") === "#portfolio") {
+      // Set initial active state
+      if (link.getAttribute("href") === currentHash) {
         link.classList.add("active");
-      } else {
-        link.classList.remove("active");
       }
     });
   }
@@ -126,18 +125,45 @@ class PortfolioApp {
     }
   }
 
+  setupCardFlip() {
+    const learnMoreBtn = document.querySelector(".btn-secondary");
+    const backBtn = document.querySelector(".btn-back");
+    const profileCard = document.querySelector(".profile-card");
+
+    if (learnMoreBtn && backBtn && profileCard) {
+      learnMoreBtn.addEventListener("click", () => {
+        profileCard.classList.add("flipped");
+      });
+
+      backBtn.addEventListener("click", () => {
+        profileCard.classList.remove("flipped");
+      });
+    }
+  }
+
   toggleContact() {
     const contactSection = document.querySelector(".contact-section");
     if (contactSection) {
       const isExpanding = !contactSection.classList.contains("expanded");
 
       if (isExpanding) {
-        // Just expand the form
+        // First expand the form
         contactSection.classList.add("expanded");
 
-        // Scroll to show the contact section (scroll down to it)
-        const contactTop = contactSection.offsetTop;
-        window.scrollTo(0, contactTop);
+        // Wait for animation to complete (400ms from CSS), then scroll
+        setTimeout(() => {
+          const contactTop = contactSection.offsetTop;
+          const windowHeight = window.innerHeight;
+          const contactHeight = contactSection.offsetHeight;
+
+          // Scroll so the entire contact section is visible
+          const scrollTarget = contactTop - (windowHeight - contactHeight) / 2;
+
+          window.scrollTo({
+            top: Math.max(0, scrollTarget),
+            behavior: "smooth",
+          });
+        }, 450); // Slightly longer than CSS animation (400ms)
       } else {
         // Just collapse
         contactSection.classList.remove("expanded");
