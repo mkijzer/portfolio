@@ -72,7 +72,7 @@ body {
   display: flex;
   justify-content: flex-start; /* Back to left alignment */
   align-items: center;
-  padding: var(--spacing-sm) 0;
+  padding: var(--spacing-lg) var(--spacing-lg);
   margin-top: 6rem;
   background: var(--glass-bg);
   backdrop-filter: var(--glass-blur);
@@ -84,13 +84,12 @@ body {
 }
 
 .page-header h1 {
-  text-align: left; /* Back to original left alignment */
+  text-align: left;
   margin: 0;
-  margin-left: var(--spacing-2xl);
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--line-height);
-  color: var(--text-primary);
+  padding-left: var(--spacing-2xl);
+  font-size: clamp(1.4rem, 5vw, 2rem);
+  line-height: 1.15;
+  width: 100%;
 }
 
 /* =============
@@ -735,22 +734,22 @@ body {
 
 /* Position each side of the cube in 3D space */
 .front {
-  transform: translateZ(40px);
+  transform: translateZ(30px);
 }
 .back {
-  transform: translateZ(-40px) rotateY(180deg);
+  transform: translateZ(-30px) rotateY(180deg);
 }
 .top {
-  transform: rotateX(90deg) translateZ(40px);
+  transform: rotateX(90deg) translateZ(30px);
 }
 .bottom {
-  transform: rotateX(-90deg) translateZ(40px);
+  transform: rotateX(-90deg) translateZ(30px);
 }
 .left {
-  transform: rotateY(-90deg) translateZ(40px);
+  transform: rotateY(-90deg) translateZ(30px);
 }
 .right {
-  transform: rotateY(90deg) translateZ(40px);
+  transform: rotateY(90deg) translateZ(30px);
 }
 
 /* Continuous rotation animation */
@@ -1119,7 +1118,8 @@ body {
   .page-header h1 {
     font-size: clamp(2rem, 5vw, 3rem);
     margin: var(--spacing-base);
-    margin-left: var(--spacing-2xl);
+    padding: var(--spacing-xl) var(--spacing-2xl);
+    padding-left: var(--spacing-xl);
     text-align: left;
   }
 
