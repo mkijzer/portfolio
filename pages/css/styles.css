@@ -6,6 +6,7 @@
 
 /* =============
    UNIVERSAL GLASS EFFECT 
+   Applied to all elements with .glass class for consistent glassmorphism
    ============= */
 .glass {
   background: var(--glass-bg);
@@ -18,6 +19,7 @@
 
 /* =============
    RESET AND BASE STYLES 
+   Normalize browser defaults and establish base styling
    ============= */
 * {
   margin: 0;
@@ -29,7 +31,7 @@ html,
 body {
   width: 100%;
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 body {
@@ -42,6 +44,8 @@ body {
 
 /* =============
    MOBILE FIRST LAYOUT 
+   Single column grid with radial gradient background
+   Transforms to sidebar layout on desktop (768px+)
    ============= */
 .portfolio-layout {
   display: grid;
@@ -51,6 +55,7 @@ body {
   width: 100%;
   padding: 0 var(--spacing-sm);
   box-sizing: border-box;
+  /* Radial gradient from orange to dark */
   background-image: radial-gradient(
     ellipse farthest-corner at 59% 78%,
     var(--accent-color) 0%,
@@ -60,14 +65,15 @@ body {
 }
 
 /* =============
-   PAGE HEADER - ALIGNED WITH PROFILE CARD
+   PAGE HEADER 
+   Contains the dynamic animated title that cycles through roles
    ============= */
 .page-header {
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-start; /* Back to left alignment */
   align-items: center;
-  padding: var(--spacing-sm) var(--spacing-base);
-  margin-top: 6rem; /* Space for mobile sidebar */
+  padding: var(--spacing-sm) 0;
+  margin-top: 6rem;
   background: var(--glass-bg);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
@@ -78,8 +84,9 @@ body {
 }
 
 .page-header h1 {
-  text-align: left;
+  text-align: left; /* Back to original left alignment */
   margin: 0;
+  margin-left: var(--spacing-2xl);
   font-size: clamp(1.5rem, 4vw, 2.5rem);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height);
@@ -87,7 +94,8 @@ body {
 }
 
 /* =============
-   MAIN CONTENT SPACING
+   MAIN CONTENT CONTAINER
+   Flexbox column for vertical stacking of all sections
    ============= */
 .main-content {
   display: flex;
@@ -99,29 +107,31 @@ body {
 }
 
 /* =============
-   MOBILE FIRST SIDEBAR 
+   MOBILE SIDEBAR NAVIGATION
+   Fixed horizontal bar at top on mobile (<768px)
+   Transforms to vertical sidebar on desktop (768px+)
    ============= */
 .sidebar {
   position: fixed;
-  top: 0;
-  left: 0;
-  margin: var(--spacing-base);
+  top: var(--spacing-sm);
+  left: var(--spacing-sm);
+  right: var(--spacing-sm);
   padding: var(--spacing-sm);
   background: var(--glass-bg);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
-  border-radius: var(--border-radius-sm);
+  border-radius: var(--border-radius);
   border: var(--glass-border);
   box-shadow: var(--glass-shadow);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: calc(100% - 2rem);
   height: auto;
   z-index: 1000;
 }
 
+/* Profile section in navigation */
 .nav-header {
   display: flex;
   flex-direction: row;
@@ -145,6 +155,7 @@ body {
   line-height: var(--line-height);
 }
 
+/* Navigation links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -173,6 +184,7 @@ body {
   line-height: var(--line-height);
 }
 
+/* Active and hover states */
 .nav-link:hover,
 .nav-link.active {
   color: var(--accent-color);
@@ -180,7 +192,9 @@ body {
 }
 
 /* =============
-   CARD COMPONENTS - CENTERED CONTENT
+   CARD COMPONENTS
+   Base styling for all card elements with glassmorphism
+   Used throughout portfolio for consistent design
    ============= */
 .card {
   padding: var(--spacing-lg);
@@ -234,14 +248,16 @@ body {
 }
 
 /* =============
-   MODERN BUTTON SYSTEM WITH GLASS EFFECTS & SQUIRCLE CORNERS
+   BUTTON SYSTEM
+   Modern glass-effect buttons with hover animations
+   Three variants: primary (filled), secondary (outlined), back (subtle)
    ============= */
 .btn-primary,
 .btn-secondary,
 .btn-back {
-  padding: clamp(0.5rem, 2vw, 0.75rem) clamp(1rem, 4vw, 1.5rem);
+  padding: clamp(0.3rem, 2vw, 0.4rem) clamp(1rem, 4vw, 1.5rem);
   border: none;
-  border-radius: 12px; /* Modern squircle-like rounded corners */
+  border-radius: var(--border-radius-sm);
   font-size: clamp(var(--font-size-sm), 2vw, var(--font-size-base));
   font-weight: var(--font-weight-medium);
   cursor: pointer;
@@ -253,7 +269,7 @@ body {
   -webkit-backdrop-filter: blur(10px);
 }
 
-/* Glass effect primary button */
+/* Primary button - Orange gradient with glow effect */
 .btn-primary {
   background: linear-gradient(135deg, var(--accent-color), var(--accent-dark));
   color: var(--text-primary);
@@ -262,6 +278,7 @@ body {
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
+/* Shimmer effect on hover */
 .btn-primary::before {
   content: "";
   position: absolute;
@@ -284,7 +301,7 @@ body {
   opacity: 1;
 }
 
-/* Glass effect secondary button */
+/* Secondary button - Outlined style with fill on hover */
 .btn-secondary {
   background: rgba(255, 255, 255, 0.05);
   color: var(--accent-color);
@@ -302,7 +319,7 @@ body {
   box-shadow: 0 8px 32px rgba(247, 119, 55, 0.3);
 }
 
-/* Glass effect back button */
+/* Back button - Subtle glass effect for secondary actions */
 .btn-back {
   background: rgba(255, 255, 255, 0.08);
   color: var(--text-secondary);
@@ -318,82 +335,99 @@ body {
 }
 
 /* =============
-   PROFILE CARD WITH LEFT ALIGNMENT & FLIP ANIMATION
+   PROFILE CARD - FLIP ANIMATION SYSTEM
+   
+   This is the main card in the bento grid that flips on click
+   
+   Structure:
+   - .profile-card: Container with 3D transform space
+   - .card-front: Front side content (intro text + CTA buttons)
+   - .card-back: Back side content (detailed bio)
+   
+   How it works:
+   1. Both sides are absolutely positioned with custom top values
+   2. Centered horizontally using left: 50% and translateX(-50%)
+   3. backface-visibility hides each side when facing away
+   4. Text visibility switches at 0.3s (50% of the 0.6s animation)
+   5. JavaScript adds .flipped class and triggers animation
+   
+   Note: overflow: visible prevents clipping during flip
    ============= */
 .profile-card {
   position: relative;
-  transform-style: preserve-3d;
-  transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  perspective: 1000px;
-  text-align: left;
-  align-items: flex-start;
+  transform-style: preserve-3d; /* Enable 3D space for children */
+  transition: transform 0.8s ease;
+  overflow: visible; /* Allow content to be visible during flip */
 }
 
+/* Applied by JavaScript when Learn More is clicked */
 .profile-card.flipped {
   transform: rotateY(180deg);
 }
 
-/* Front content - left aligned */
+/* Front Side - Visible by default */
+.card-front {
+  position: absolute;
+  top: -25%;
+  left: 41%;
+  transform: translateX(-50%);
+  width: 80%;
+  backface-visibility: hidden;
+  transition: opacity 0s 0.3s, visibility 0s 0.3s;
+}
+
+/* Front side text styling */
 .intro-text {
-  text-align: left;
-  width: 100%;
+  text-align: left; /* Back to original left alignment */
+  margin-bottom: var(--spacing-base);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .intro-text h2,
 .intro-text p {
-  text-align: left;
+  text-align: left; /* Back to original left alignment */
 }
 
+/* Front side button container */
 .cta-buttons {
   display: flex;
   gap: var(--spacing-sm);
-  margin-top: var(--spacing-base);
   flex-wrap: wrap;
 }
 
-/* Back side content - centered */
+/* Back Side - Hidden by default, rotated 180deg */
 .card-back {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: var(--spacing-lg);
-  background: var(--glass-bg);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
-  border-radius: var(--border-radius);
+  top: 30%; /* Custom vertical positioning */
+  left: 40%;
+  transform: translateX(-50%) rotateY(180deg); /* Center horizontally and pre-rotate */
+  width: 80%;
+  backface-visibility: hidden; /* Hide when card rotates away */
   opacity: 0;
   visibility: hidden;
-  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  backface-visibility: hidden;
-  transform: rotateY(180deg);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
+  transition: opacity 0s 0.3s, visibility 0s 0.3s; /* Switch text at flip midpoint */
 }
 
+/* Show back content when card is flipped */
 .profile-card.flipped .card-back {
   opacity: 1;
   visibility: visible;
-  transform: rotateY(0deg);
+  transition: opacity 0s 0.3s, visibility 0s 0.3s;
 }
 
-.profile-card .intro-text,
-.profile-card .cta-buttons {
-  transition: opacity 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  backface-visibility: hidden;
-}
-
-.profile-card.flipped .intro-text,
-.profile-card.flipped .cta-buttons {
+/* Hide front content when card is flipped */
+.profile-card.flipped .card-front {
   opacity: 0;
+  visibility: hidden;
+  transition: opacity 0s 0.3s, visibility 0s 0.3s;
 }
 
-/* Bio content styling - centered in back card */
+/* Back side content styling */
 .bio-content {
-  text-align: center;
+  text-align: left;
+  width: 100%;
 }
 
 .bio-content h3 {
@@ -401,7 +435,6 @@ body {
   margin-bottom: var(--spacing-base);
   color: var(--accent-color);
   font-weight: var(--font-weight-bold);
-  text-align: center;
 }
 
 .bio-points {
@@ -418,6 +451,7 @@ body {
   text-align: left;
 }
 
+/* Custom label prefix using data attribute */
 .bio-item::before {
   content: attr(data-label) ": ";
   font-weight: var(--font-weight-bold);
@@ -426,8 +460,29 @@ body {
   margin-right: var(--spacing-xs);
 }
 
+/* Flip animations - Applied via JavaScript style.animation */
+@keyframes profileFlip {
+  0% {
+    transform: perspective(500px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(500px) rotateY(180deg);
+  }
+}
+
+@keyframes profileFlipBack {
+  0% {
+    transform: perspective(500px) rotateY(180deg);
+  }
+  100% {
+    transform: perspective(500px) rotateY(0deg);
+  }
+}
+
 /* =============
-   GRID LAYOUTS 
+   GRID LAYOUTS
+   Bento-style grid system for portfolio and info cards
+   Mobile: single column, Desktop: multi-column
    ============= */
 .about-grid {
   display: grid;
@@ -442,7 +497,8 @@ body {
 }
 
 /* =============
-   PROJECT SECTION 
+   PROJECT SECTION
+   Featured projects with image cards and GitHub links
    ============= */
 .projectcard {
   display: flex;
@@ -470,6 +526,7 @@ body {
   text-align: left;
 }
 
+/* View all button */
 .projectcard button {
   align-self: flex-start;
   padding: var(--spacing-xs) var(--spacing-base);
@@ -487,6 +544,7 @@ body {
   transform: translateY(-2px);
 }
 
+/* Project grid container */
 .project-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -494,6 +552,7 @@ body {
   width: 100%;
 }
 
+/* Individual project cards */
 .project-card {
   display: flex;
   flex-direction: column;
@@ -516,6 +575,7 @@ body {
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
 }
 
+/* Project thumbnail image */
 .project-card-image {
   width: 60px;
   height: 60px;
@@ -540,6 +600,7 @@ body {
   line-height: var(--line-height);
 }
 
+/* GitHub link */
 .project-card-link {
   display: inline-flex;
   align-items: center;
@@ -555,13 +616,14 @@ body {
   color: var(--accent-hover);
 }
 
-/* Hide project images on mobile */
+/* Hide project images on mobile (unused but kept for future) */
 .project-images {
   display: none;
 }
 
 /* =============
-   ABOUT SECTION 
+   ABOUT SECTION
+   Detailed bio and skills showcase
    ============= */
 .about-section {
   width: 100%;
@@ -600,6 +662,7 @@ body {
   text-align: left;
 }
 
+/* Skills section */
 .about-skills {
   margin-top: var(--spacing-base);
 }
@@ -625,30 +688,35 @@ body {
   line-height: var(--line-height);
 }
 
+/* Arrow prefix for skills */
 .about-skills li:before {
-  content: "→";
+  content: "â†'";
   color: var(--accent-color);
   margin-right: var(--spacing-xs);
 }
 
 /* =============
-   CUBE ANIMATION - RESPONSIVE SIZING
+   3D CUBE ANIMATION
+   Rotating cube displaying tech stack skills on all 6 sides
+   Continuously rotates on both X and Y axes
    ============= */
 .cube-container {
   width: clamp(60px, 8vw, 80px);
   height: clamp(60px, 8vw, 80px);
-  perspective: 250px;
+  perspective: 250px; /* 3D perspective depth */
   margin: auto;
 }
 
 .cube {
   width: 100%;
   height: 100%;
+
   position: relative;
   transform-style: preserve-3d;
-  animation: rotate-cube 10s infinite linear;
+  animation: rotate-cube 30s infinite linear;
 }
 
+/* Styling for all 6 sides of the cube */
 .side {
   position: absolute;
   width: 100%;
@@ -665,6 +733,7 @@ body {
   line-height: var(--line-height);
 }
 
+/* Position each side of the cube in 3D space */
 .front {
   transform: translateZ(40px);
 }
@@ -684,6 +753,7 @@ body {
   transform: rotateY(90deg) translateZ(40px);
 }
 
+/* Continuous rotation animation */
 @keyframes rotate-cube {
   from {
     transform: rotateX(0) rotateY(0);
@@ -694,7 +764,10 @@ body {
 }
 
 /* =============
-   DYNAMIC TITLE ANIMATION 
+   DYNAMIC TITLE ANIMATION
+   Animated gradient text with 3D flip effect
+   Cycles through different developer titles every 7 seconds
+   Text changes via JavaScript while animation runs continuously
    ============= */
 .dynamic-title {
   font-size: clamp(1.5rem, 4vw, 2.5rem);
@@ -703,48 +776,65 @@ body {
   position: relative;
   display: inline-block;
   line-height: var(--line-height);
-}
-
-.dynamic-title::before {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 100%;
-  color: var(--accent-color);
   overflow: hidden;
-  animation: colorSweep 2s ease-in-out forwards;
+  perspective: 1000px;
+  /* Animated gradient background */
+  background: linear-gradient(
+    90deg,
+    var(--accent-color) 0%,
+    var(--accent-hover) 50%,
+    var(--accent-color) 100%
+  );
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  /* Two animations run simultaneously */
+  animation: slideInOutWithPause 7s infinite 0s,
+    gradientMove 1.5s ease-in-out infinite;
 }
 
-@keyframes colorSweep {
+/* Gradient moves horizontally */
+@keyframes gradientMove {
   0% {
-    width: 0%;
+    background-position: -100% 0;
   }
   100% {
-    width: 100%;
+    background-position: 100% 0;
   }
 }
 
-.dynamic-title.fade {
-  animation: fadeOut 0.5s ease-in-out forwards 2s;
-}
-
-@keyframes fadeOut {
-  0% {
+/* 3D flip animation with pause */
+@keyframes slideInOutWithPause {
+  0%,
+  40% {
+    transform: perspective(400px) rotateX(0deg);
     opacity: 1;
   }
-  100% {
+  55% {
+    transform: perspective(400px) rotateX(90deg);
     opacity: 0;
+  }
+  60% {
+    transform: perspective(400px) rotateX(270deg);
+    opacity: 0;
+  }
+  85%,
+  100% {
+    transform: perspective(400px) rotateX(360deg);
+    opacity: 1;
   }
 }
 
+/* Cursor element (hidden, kept for potential future use) */
 .cursor {
   display: none;
 }
 
 /* =============
-   CONTACT SECTION 
+   CONTACT SECTION
+   Expandable contact form with smooth accordion animation
+   Clicking header toggles form visibility
    ============= */
 .contact-section {
   width: 100%;
@@ -758,6 +848,7 @@ body {
   position: relative;
 }
 
+/* Clickable header to toggle form */
 .contact-header {
   display: flex;
   justify-content: space-between;
@@ -778,6 +869,7 @@ body {
   font-weight: var(--font-weight-bold);
 }
 
+/* Toggle button */
 .contact-toggle {
   background: none;
   border: none;
@@ -788,17 +880,17 @@ body {
   transition: transform 0.3s ease;
 }
 
+/* Arrow icon */
 .contact-arrow {
   transition: transform 0.3s ease;
 }
 
+/* Rotate arrow when expanded */
 .contact-section.expanded .contact-arrow {
   transform: rotate(180deg);
 }
 
-/* =============
-   FORM STYLES WITH GLASS EFFECTS
-   ============= */
+/* Form container with smooth expand/collapse */
 .contact-form-container {
   max-height: 0;
   overflow: hidden;
@@ -810,6 +902,7 @@ body {
   padding: 0 var(--spacing-base) var(--spacing-base);
 }
 
+/* Form styling */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -828,6 +921,7 @@ body {
   font-weight: var(--font-weight-medium);
 }
 
+/* Input and textarea with glass effect */
 .form-group input,
 .form-group textarea {
   padding: var(--spacing-sm);
@@ -841,6 +935,7 @@ body {
   -webkit-backdrop-filter: blur(10px);
 }
 
+/* Focus state */
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
@@ -853,12 +948,13 @@ body {
   min-height: 100px;
 }
 
+/* Submit button */
 .submit-btn {
   padding: clamp(0.5rem, 2vw, 0.75rem) clamp(1rem, 4vw, 1.5rem);
   background: linear-gradient(135deg, var(--accent-color), var(--accent-dark));
   color: var(--text-primary);
   border: none;
-  border-radius: 12px;
+  border-radius: var(--border-radius-sm);
   font-size: clamp(var(--font-size-sm), 2vw, var(--font-size-base));
   font-weight: var(--font-weight-medium);
   cursor: pointer;
@@ -874,7 +970,8 @@ body {
 }
 
 /* =============
-   FOOTER 
+   FOOTER
+   Site footer with copyright and additional info
    ============= */
 .site-footer {
   width: 100%;
@@ -896,7 +993,9 @@ body {
 }
 
 /* =============
-   MODE TOGGLE 
+   MODE TOGGLE
+   Light/dark mode switcher with sun/moon icons
+   Hidden on mobile, visible on desktop in sidebar
    ============= */
 .mode-toggle {
   display: none;
@@ -928,7 +1027,7 @@ body {
   transition: transform 0.6s ease;
 }
 
-/* Light/dark mode icon animations */
+/* Sun/moon icon transitions for light/dark mode */
 .light-mode .mode-icon .sun {
   opacity: 0;
   transform: translateY(10px);
@@ -950,33 +1049,35 @@ body {
 }
 
 /* =============
-   DESKTOP RESPONSIVE STYLES 
+   DESKTOP RESPONSIVE STYLES (768px+)
+   Layout transforms to sidebar + main content
+   Cards expand, grids become multi-column
+   More generous spacing throughout
    ============= */
 @media (min-width: 768px) {
-  /* Desktop layout adjustments */
+  /* Desktop layout with fixed sidebar */
   .portfolio-layout {
     display: block;
     padding-left: var(--sidebar-width);
-    padding-right: var(--spacing-base);
+    padding-right: var(--spacing-lg);
   }
 
-  /* Desktop sidebar */
+  /* Sidebar transforms to vertical layout */
   .sidebar {
     position: fixed;
-    top: 0;
+    top: var(--spacing-xl);
     left: 0;
     padding: var(--spacing-lg) var(--spacing-base);
     flex-direction: column;
     align-items: center;
     width: var(--sidebar-width);
-    height: 100vh;
     margin: 0;
   }
 
   .nav-header {
     flex-direction: column;
     width: 100%;
-    padding-bottom: var(--spacing-base);
+    padding-bottom: var(--spacing-xl);
   }
 
   .profile-picture {
@@ -1003,27 +1104,32 @@ body {
     min-height: 3rem;
   }
 
-  /* Desktop content spacing and alignment */
+  /* Content spacing adjustments */
   .main-content {
     padding: var(--spacing-base);
+    padding-left: var(--spacing-lg);
   }
 
   .page-header {
-    margin-top: var(--spacing-xl);
-    margin-left: var(--spacing-xl);
-    padding-left: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+    margin-left: 0;
+    padding: var(--spacing-lg);
   }
 
   .page-header h1 {
     font-size: clamp(2rem, 5vw, 3rem);
     margin: var(--spacing-base);
+    margin-left: var(--spacing-2xl);
+    text-align: left;
   }
 
   .dynamic-title {
     font-size: clamp(2rem, 5vw, 3rem);
+    perspective: 1000px;
+    transform-style: preserve-3d;
   }
 
-  /* Desktop card styling */
+  /* Desktop card sizing */
   .card {
     padding: var(--spacing-xl);
     min-height: 200px;
@@ -1039,11 +1145,10 @@ body {
     margin-bottom: var(--spacing-base);
   }
 
-  /* Desktop grid layouts */
+  /* Multi-column grids - consistent spacing only */
   .about-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-lg);
-    margin: 0 var(--spacing-xl);
   }
 
   .profile-card {
@@ -1052,6 +1157,7 @@ body {
 
   .info-cards {
     grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
   }
 
   .project-grid {
@@ -1059,10 +1165,11 @@ body {
     gap: var(--spacing-lg);
   }
 
+  /* Desktop project card layout */
   .project-card {
     flex-direction: row;
     align-items: center;
-    padding: var(--spacing-lg);
+    padding: var(--spacing-xl);
   }
 
   .project-card-image {
@@ -1083,7 +1190,6 @@ body {
   }
 
   .projectcard {
-    margin: 0 var(--spacing-xl);
     padding: var(--spacing-xl);
   }
 
@@ -1092,7 +1198,7 @@ body {
   }
 
   .about-container {
-    margin: 0 var(--spacing-xl);
+    padding: var(--spacing-xl);
   }
 
   /* Desktop cube sizing */
@@ -1106,6 +1212,7 @@ body {
     font-size: var(--font-size-sm);
   }
 
+  /* Adjust cube face positions for larger size */
   .front {
     transform: translateZ(50px);
   }
@@ -1125,15 +1232,15 @@ body {
     transform: rotateY(90deg) translateZ(50px);
   }
 
-  /* Desktop mode toggle */
+  /* Show mode toggle on desktop */
   .mode-toggle {
     display: flex;
-    margin-top: auto;
+    margin-top: auto; /* Push to bottom of sidebar */
     width: 45px;
     height: 45px;
   }
 
-  /* Desktop contact form layout */
+  /* Desktop contact form grid layout */
   .contact-header h2 {
     font-size: clamp(var(--font-size-xl), 4vw, var(--font-size-3xl));
   }
@@ -1144,6 +1251,7 @@ body {
     gap: var(--spacing-base);
   }
 
+  /* Message field spans both columns */
   .form-group:nth-child(4) {
     grid-column: span 2;
   }
@@ -1153,7 +1261,7 @@ body {
     justify-self: start;
   }
 
-  /* Desktop button spacing */
+  /* Desktop button layout */
   .cta-buttons {
     flex-direction: row;
     gap: var(--spacing-base);
@@ -1172,6 +1280,7 @@ body {
 
 /* =============
    TABLET STYLES (768px - 1024px)
+   Intermediate breakpoint adjustments
    ============= */
 @media (min-width: 768px) and (max-width: 1024px) {
   .about-grid {
@@ -1182,6 +1291,7 @@ body {
     padding: var(--spacing-lg);
   }
 
+  /* Stack project cards vertically on tablet */
   .project-card {
     flex-direction: column;
   }
@@ -1193,31 +1303,26 @@ body {
 
 /* =============
    LARGE DESKTOP STYLES (1200px+)
+   Maximum width layouts with generous spacing
    ============= */
 @media (min-width: 1200px) {
-  .about-grid,
-  .projectcard,
-  .about-container {
-    margin: 0 var(--spacing-2xl);
-  }
-
-  .page-header {
-    margin-left: var(--spacing-2xl);
-  }
-
+  /* 3-column project grid on large screens */
   .project-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 /* =============
-   ACCESSIBILITY IMPROVEMENTS
+   ACCESSIBILITY
+   Reduced motion and high contrast support
    ============= */
+
+/* Respect user's motion preferences */
 @media (prefers-reduced-motion: reduce) {
   * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+    transition-duration: 0.01ms;
   }
 
   .cube {
@@ -1225,13 +1330,13 @@ body {
   }
 }
 
-/* Focus indicators for keyboard navigation */
+/* Keyboard navigation focus indicators */
 .btn-primary:focus,
 .btn-secondary:focus,
 .btn-back:focus,
 .nav-link:focus,
 .contact-toggle:focus {
-  outline: 2px solid var(--accent-color);
+  outline: 1px solid var(--accent-color);
   outline-offset: 2px;
 }
 

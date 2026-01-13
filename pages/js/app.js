@@ -89,8 +89,8 @@ class PortfolioApp {
 
     titleElements.forEach((element) => {
       this.cycleTitles(element, [
-        "Full-stack Developer",
-        "UI/UX Designer",
+        "Front-end Developer",
+        "Back-end Developer",
         "Creative Problem Solver",
         "Tech Enthusiast",
       ]);
@@ -130,12 +130,17 @@ class PortfolioApp {
     const backBtn = document.querySelector(".btn-back");
     const profileCard = document.querySelector(".profile-card");
 
-    if (learnMoreBtn && backBtn && profileCard) {
+    if (learnMoreBtn && profileCard) {
       learnMoreBtn.addEventListener("click", () => {
+        profileCard.style.animation = "profileFlip 0.6s ease-in-out forwards";
         profileCard.classList.add("flipped");
       });
+    }
 
+    if (backBtn && profileCard) {
       backBtn.addEventListener("click", () => {
+        profileCard.style.animation =
+          "profileFlipBack 0.6s ease-in-out forwards";
         profileCard.classList.remove("flipped");
       });
     }
@@ -210,21 +215,15 @@ class PortfolioApp {
 
     const updateTitle = () => {
       element.textContent = titles[currentIndex];
-      element.setAttribute("data-text", titles[currentIndex]);
-      element.classList.remove("fade");
-      element.offsetHeight; // Force reflow
-      element.classList.add("fade");
+      currentIndex = (currentIndex + 1) % titles.length;
     };
 
-    element.addEventListener("animationend", (e) => {
-      if (e.animationName === "fadeOut") {
-        currentIndex = (currentIndex + 1) % titles.length;
-        setTimeout(updateTitle, 500);
-      }
-    });
+    updateTitle(); // initial
 
-    // Start the animation
-    updateTitle();
+    setTimeout(() => {
+      updateTitle(); // change BEFORE first visible flip
+      setInterval(updateTitle, 7000);
+    }, 4400);
   }
 }
 
