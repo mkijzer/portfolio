@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mike's Portfolio</title>
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="portfolio-layout">
+      <nav class="sidebar glass">
+        <div class="nav-header">
+          <img
+            src="../Images/profilePicture.png"
+            alt="Mike's profile picture"
+            class="profile-picture"
+          />
+          <span class="profile-name">Mike</span>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="#portfolio" class="nav-link active">
+              <svg class="nav-icon" width="16" height="16" viewBox="0 0 16 16">
+                <line
+                  x1="3"
+                  y1="5"
+                  x2="13"
+                  y2="5"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+                <line
+                  x1="3"
+                  y1="8"
+                  x2="13"
+                  y2="8"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+                <line
+                  x1="3"
+                  y1="11"
+                  x2="13"
+                  y2="11"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+              </svg>
+              <span>Portfolio</span>
+            </a>
+          </li>
+          <li>
+            <a href="#about" class="nav-link">
+              <svg class="nav-icon" width="16" height="16" viewBox="0 0 16 16">
+                <rect
+                  x="3"
+                  y="6"
+                  width="10"
+                  height="6"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  fill="none"
+                />
+                <line
+                  x1="6"
+                  y1="6"
+                  x2="6"
+                  y2="4"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+                <line
+                  x1="6"
+                  y1="4"
+                  x2="10"
+                  y2="4"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+                <line
+                  x1="10"
+                  y1="4"
+                  x2="10"
+                  y2="6"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+              </svg>
+              <span>Skills</span>
+            </a>
+          </li>
+          <li>
+            <a href="#projects" class="nav-link">
+              <svg class="nav-icon" width="16" height="16" viewBox="0 0 16 16">
+                <path
+                  d="M5 5L2.5 8L5 11M11 5L13.5 8L11 11"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  fill="none"
+                />
+              </svg>
+              <span>Projects</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link contact-trigger">
+              <svg class="nav-icon" width="16" height="16" viewBox="0 0 16 16">
+                <rect
+                  x="2"
+                  y="4"
+                  width="12"
+                  height="8"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  fill="none"
+                />
+                <path
+                  d="M2 4L8 9L14 4"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  fill="none"
+                />
+              </svg>
+              <span class="nav-text">Contact</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <main class="main-content">
+        <header class="page-header glass">
+          <h1>Fullstack Developer & Digital Craftsman</h1>
+        </header>
+
+        <section id="portfolio" class="about-grid">
+          <!-- Profile Card with Front/Back Content -->
+          <article class="profile-card card glass">
+            <div class="card-back">
+              <div class="bio-content">
+                <h3>About Mike</h3>
+                <div class="bio-points">
+                  <div class="bio-item" data-label="Experience">
+                    Self-taught developer with 2+ years building modern web
+                    applications
+                  </div>
+                  <div class="bio-item" data-label="Focus">
+                    React, Node.js, and responsive design
+                  </div>
+                  <div class="bio-item" data-label="Passion">
+                    Creating clean, efficient code and learning new technologies
+                  </div>
+                </div>
+                <button class="btn-back">
+                  <svg
+                    class="btn-arrow-left"
+                    viewBox="0 0 10 10"
+                    width="11"
+                    height="11"
+                  >
+                    <path class="arrow-line" d="M10 5h-7"></path>
+                    <path class="arrow-chevron" d="M9 1l-4 4 4 4"></path>
+                  </svg>
+                  Back to Overview
+                </button>
+              </div>
+            </div>
+            <!-- Front Side - Main Introduction -->
+            <div class="card-front">
+              <div class="intro-text">
+                <h2>
+                  <span class="dynamic-title"></span
+                  ><span class="cursor"> | </span>
+                </h2>
+                <p>
+                  Building tomorrow's web experiences with modern technologies
+                  and creative problem-solving.
+                </p>
+              </div>
+
+              <!-- Call-to-Action Buttons -->
+              <div class="cta-buttons">
+                <button class="btn-primary contact-trigger">Hire Me</button>
+                <button class="btn-secondary">
+                  Learn More
+                  <svg
+                    class="btn-arrow-right"
+                    viewBox="0 0 10 10"
+                    width="11"
+                    height="11"
+                  >
+                    <path class="arrow-line" d="M0 5h7"></path>
+                    <path class="arrow-chevron" d="M1 1l4 4-4 4"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Back Side - Detailed Bio (Hidden by default) -->
+          </article>
+          <div class="info-cards">
+            <article class="card glass">
+              <h3>Certified & Selftaught</h3>
+              <div class="certification-text">
+                <!-- <span class="cert-role">front-end & back-end developer</span> -->
+                <!-- <span class="cert-connector">&</span>
+                <span class="cert-role">backend developer</span> -->
+              </div>
+            </article>
+            <article class="card glass">
+              <h3>Passion for Learning</h3>
+              <!-- <p>passion for learning</p> -->
+            </article>
+            <article class="card glass">
+              <h3>Modern Stack</h3>
+              <!-- <ul>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>Prisma</li>
+                <li>Responsive Design</li>
+              </ul> -->
+            </article>
+            <article class="card glass">
+              <div class="cube-container">
+                <div class="cube">
+                  <div class="side front">Adaptable</div>
+                  <div class="side back">Detail-Oriented</div>
+                  <div class="side top">Creative Thinker</div>
+                  <div class="side bottom">Problem Solver</div>
+                  <div class="side left">Self-Taught</div>
+                  <div class="side right">Design-Focussed</div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="projects" class="projectcard glass">
+          <h2>Featured Projects</h2>
+
+          <!-- Featured Projects - Large Cards -->
+          <div class="featured-projects" id="featuredProjects">
+            <!-- Will be populated by JavaScript -->
+          </div>
+
+          <!-- View All Button -->
+          <button
+            class="btn-view-all"
+            onclick="portfolioApp.openProjectModal()"
+          >
+            View All Projects
+            <svg
+              class="btn-arrow-right"
+              viewBox="0 0 10 10"
+              width="11"
+              height="11"
+            >
+              <path class="arrow-line" d="M0 5h7"></path>
+              <path class="arrow-chevron" d="M1 1l4 4-4 4"></path>
+            </svg>
+          </button>
+        </section>
+
+        <section id="about" class="about-section">
+          <div class="about-container glass">
+            <h2>Skills</h2>
+            <div class="about-content">
+              <p>
+                I'm a full-stack developer who embraces modern development
+                workflows, including AI-assisted coding and rapid prototyping to
+                deliver exceptional web experiences.
+              </p>
+              <p>
+                My approach combines traditional development skills with
+                cutting-edge tools and methodologies. I focus on system
+                architecture, clean code practices, and user-centered design to
+                build scalable applications efficiently.
+              </p>
+              <div class="about-skills">
+                <!-- <h3>My Skills</h3> -->
+                <div class="skills-categories">
+                  <div class="skills-category">
+                    <h4 class="category-title">🤖 AI Development</h4>
+                    <div class="skills-grid">
+                      <div class="skill-item">AI-Assisted Coding</div>
+                      <div class="skill-item">Prompt Engineering</div>
+                      <div class="skill-item">Rapid Prototyping</div>
+                    </div>
+                  </div>
+
+                  <div class="skills-category">
+                    <h4 class="category-title">💻 Frontend</h4>
+                    <div class="skills-grid">
+                      <div class="skill-item">React & JavaScript</div>
+                      <div class="skill-item">Modern CSS</div>
+                      <div class="skill-item">Responsive Design</div>
+                    </div>
+                  </div>
+
+                  <div class="skills-category">
+                    <h4 class="category-title">⚙️ Backend</h4>
+                    <div class="skills-grid">
+                      <div class="skill-item">Node.js & APIs</div>
+                      <div class="skill-item">Database Design</div>
+                      <div class="skill-item">System Architecture</div>
+                    </div>
+                  </div>
+
+                  <div class="skills-category">
+                    <h4 class="category-title">🎨 Design</h4>
+                    <div class="skills-grid">
+                      <div class="skill-item">User Experience</div>
+                      <div class="skill-item">Interface Design</div>
+                      <div class="skill-item">Modern UI Patterns</div>
+                    </div>
+                  </div>
+
+                  <div class="skills-category">
+                    <h4 class="category-title">🚀 Workflow</h4>
+                    <div class="skills-grid">
+                      <div class="skill-item">Modern Development</div>
+                      <div class="skill-item">Clean Code Practices</div>
+                      <div class="skill-item">Efficient Delivery</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="contact-modal" id="contactModal">
+          <div class="modal-inner glass">
+            <button class="modal-close" id="modalCloseBtn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <h2>Get in Touch</h2>
+            <form class="contact-form">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="submit-btn">Send</button>
+            </form>
+          </div>
+        </div>
+
+        <footer class="site-footer glass">
+          <div class="footer-content">
+            <p>Additional content can be added here</p>
+          </div>
+        </footer>
+      </main>
+    </div>
+
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>

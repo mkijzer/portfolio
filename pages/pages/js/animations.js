@@ -15,8 +15,9 @@ class AnimationController {
   // Scroll-triggered animations
   initScrollAnimations() {
     const projectCards = document.querySelectorAll(".project-card");
+    const skillCards = document.querySelectorAll(".skills-category");
 
-    if (projectCards.length === 0) return;
+    if (projectCards.length === 0 && skillCards.length === 0) return;
 
     // Create intersection observer
     const scrollObserver = new IntersectionObserver(
@@ -32,11 +33,17 @@ class AnimationController {
       {
         threshold: 0.2, // Trigger when 20% visible
         rootMargin: "0px 0px -50px 0px", // Start animation 50px before fully visible
-      }
+      },
     );
 
     // Observe all project cards
     projectCards.forEach((card) => {
+      card.classList.add("animate-on-scroll");
+      scrollObserver.observe(card);
+    });
+
+    // Observe all skill cards
+    skillCards.forEach((card) => {
       card.classList.add("animate-on-scroll");
       scrollObserver.observe(card);
     });

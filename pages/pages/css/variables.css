@@ -1,0 +1,178 @@
+/* ==========================================================================
+   CSS CUSTOM PROPERTIES (VARIABLES) - 2026 DESIGN SYSTEM
+   Enhanced semantic variables with glassmorphism system
+   ========================================================================== */
+
+:root {
+  /* =============
+     SPACING SYSTEM 
+     Consistent spacing scale for layouts and components
+     ============= */
+  --spacing-xs: 0.25rem; /* 4px */
+  --spacing-sm: 0.5rem; /* 8px */
+  --spacing-base: 1rem; /* 16px */
+  --spacing-lg: 1.5rem; /* 24px */
+  --spacing-xl: 2rem; /* 32px */
+  --spacing-2xl: 3rem; /* 48px */
+
+  /* =============
+     TYPOGRAPHY SYSTEM
+     Responsive font sizes and typography properties
+     ============= */
+  --font-size-xs: clamp(0.75rem, 2vw, 0.875rem);
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2rem;
+
+  --line-height: 1.4;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* =============
+     COLOR SYSTEM
+     Orange-based brand colors with semantic naming
+     ============= */
+  /* Brand Colors */
+  --accent-color: hsl(22.99, 100%, 58.04%); /* Primary orange #F77737 */
+  --accent-hover: hsl(22.99, 100%, 68.04%); /* Lighter orange hover */
+  --accent-dark: hsl(22.99, 100%, 48.04%); /* Darker orange */
+
+  /* Text Colors */
+  --text-primary: hsl(0, 0%, 98%); /* Near white */
+  --text-secondary: hsl(0, 0%, 90%); /* Light gray */
+  --text-muted: hsl(0, 0%, 70%); /* Medium gray */
+
+  /* Background Colors */
+  --bg-primary: hsl(165, 33.33%, 2.35%); /* Dark background */
+  --bg-card: hsl(0, 0%, 8%); /* Card background */
+
+  /* =============
+     GLASSMORPHISM SYSTEM
+     Unified glass effect variables for consistent design
+     ============= */
+
+  /* Standard Glass - For sidebars, headers, modals */
+  --glass-bg: rgba(0, 0, 0, 0.15);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+  --glass-blur: blur(8px);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+
+  /* Light Glass - For cards and interactive elements */
+  --glass-light-bg: rgba(255, 255, 255, 0.02);
+  --glass-light-border: 1px solid rgba(255, 255, 255, 0.08);
+  --glass-light-blur: blur(4px);
+  --glass-light-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+  /* Light Glass Hover States */
+  --glass-light-hover-bg: rgba(255, 255, 255, 0.04);
+  --glass-light-hover-border: 1px solid rgba(255, 255, 255, 0.12);
+  --glass-light-hover-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+  /* Nested Glass - For elements inside glass containers */
+  --glass-nested-bg: rgba(0, 0, 0, 0.02);
+  --glass-nested-border: 1px solid rgba(255, 255, 255, 0.05);
+  --glass-nested-blur: blur(8px);
+  --glass-nested-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  /* Glass Accent Gradients */
+  --glass-accent-subtle: radial-gradient(
+    circle at 30% 20%,
+    rgba(247, 119, 55, 0.015) 0%,
+    transparent 50%
+  );
+  --glass-accent-hover: radial-gradient(
+    circle at 30% 20%,
+    rgba(247, 119, 55, 0.025) 0%,
+    transparent 50%
+  );
+
+  /* =============
+     COMPONENT SEMANTIC VARIABLES
+     Component-specific color assignments for easy theming
+     ============= */
+
+  /* Card Components */
+  --card-bg: var(--glass-bg);
+  --card-border: var(--glass-border);
+  --card-shadow: var(--glass-shadow);
+
+  /* Featured Project Cards */
+  --featured-card-bg: var(--glass-light-bg);
+  --featured-card-border: var(--glass-light-border);
+  --featured-card-shadow: var(--glass-light-shadow);
+
+  /* Skills Category Cards */
+  --skills-card-bg: var(--glass-light-bg);
+  --skills-card-border: var(--glass-light-border);
+  --skills-card-shadow: var(--glass-light-shadow);
+
+  /* =============
+     LAYOUT SYSTEM
+     Layout dimensions and constraints
+     ============= */
+  --border-radius: 15px;
+  --border-radius-sm: 8px;
+  --sidebar-width: 18rem;
+  --max-width: 1200px;
+
+  /* =============
+     ANIMATION & TRANSITION SYSTEM
+     Consistent timing and easing functions
+     ============= */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  --easing-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --easing-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* =============
+     RESPONSIVE BREAKPOINTS
+     Breakpoint references (used in media queries)
+     ============= */
+  --breakpoint-mobile: 767px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1200px;
+}
+
+/* =============
+   DARK MODE OVERRIDES
+   Optional dark mode color adjustments
+   ============= */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Already optimized for dark mode by default */
+    /* These are placeholder values for future light mode support */
+    --bg-primary: hsl(165, 33.33%, 2.35%);
+    --text-primary: hsl(0, 0%, 98%);
+  }
+}
+
+/* =============
+   HIGH CONTRAST MODE OVERRIDES
+   Enhanced visibility for accessibility
+   ============= */
+@media (prefers-contrast: high) {
+  :root {
+    --glass-border: 2px solid rgba(255, 255, 255, 0.3);
+    --glass-light-border: 2px solid rgba(255, 255, 255, 0.2);
+    --text-muted: hsl(0, 0%, 85%);
+  }
+}
+
+/* =============
+   REDUCED MOTION OVERRIDES
+   Respect user motion preferences
+   ============= */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-fast: 0.01ms;
+    --transition-normal: 0.01ms;
+    --transition-slow: 0.01ms;
+  }
+}

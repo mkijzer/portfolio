@@ -1,0 +1,126 @@
+{
+  "featured": [
+    {
+      "id": "project-1",
+      "title": "Your Best Project",
+      "date": "Jan 2024 - Mar 2024",
+      "status": "Featured",
+      "description": "Brief description of what this project does and its main purpose",
+      "challenge": "What problem did you solve? What was the main technical challenge?",
+      "solution": "How did you build it? What technologies and approach did you use?",
+      "techStack": ["React", "Node.js", "MongoDB", "Tailwind CSS"],
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+      "github": "https://github.com/yourusername/project-1",
+      "liveDemo": "https://your-project-1.netlify.app",
+      "learned": [
+        "Advanced React patterns",
+        "API optimization",
+        "User experience design"
+      ]
+    },
+    {
+      "id": "project-2",
+      "title": "Second Best Project",
+      "date": "Oct 2023 - Dec 2023",
+      "status": "Featured",
+      "description": "Another impressive project showcasing different skills",
+      "challenge": "Different technical challenge you overcame",
+      "solution": "Your solution approach and implementation details",
+      "techStack": ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
+      "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=600&fit=crop",
+      "github": "https://github.com/yourusername/project-2",
+      "liveDemo": "https://your-project-2.vercel.app",
+      "learned": [
+        "TypeScript integration",
+        "Database design",
+        "Performance optimization"
+      ]
+    },
+    {
+      "id": "project-3",
+      "title": "Third Featured Project",
+      "date": "Jul 2023 - Sep 2023",
+      "status": "Featured",
+      "description": "Third project demonstrating your range of capabilities",
+      "challenge": "Another interesting problem you solved",
+      "solution": "Your creative solution and technical implementation",
+      "techStack": ["Vue.js", "Express", "Socket.io", "Redis"],
+      "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=600&fit=crop",
+      "github": "https://github.com/yourusername/project-3",
+      "liveDemo": "https://your-project-3.herokuapp.com",
+      "learned": [
+        "Real-time communication",
+        "State management",
+        "Scalable architecture"
+      ]
+    }
+  ],
+  "all": [
+    {
+      "id": "project-4",
+      "title": "Social Media App",
+      "date": "May 2023",
+      "status": "Regular",
+      "description": "Social platform with user interactions and content sharing",
+      "techStack": ["React", "Firebase", "Material-UI"],
+      "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&h=300&fit=crop",
+      "github": "https://github.com/yourusername/social-media-app",
+      "learned": ["Authentication", "Real-time updates"]
+    },
+    {
+      "id": "project-5",
+      "title": "Recipe Finder",
+      "date": "Mar 2023",
+      "status": "Regular",
+      "description": "Recipe discovery app with search and filtering capabilities",
+      "techStack": ["JavaScript", "API Integration", "CSS Grid"],
+      "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop",
+      "github": "https://github.com/yourusername/recipe-finder",
+      "learned": ["API consumption", "Search algorithms"]
+    },
+    {
+      "id": "project-6",
+      "title": "Music Player",
+      "date": "Jan 2023",
+      "status": "Regular",
+      "description": "Custom music player with playlist management and audio controls",
+      "techStack": ["Vanilla JS", "Web Audio API", "CSS Animations"],
+      "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
+      "github": "https://github.com/yourusername/music-player",
+      "learned": ["Audio APIs", "Custom controls"]
+    },
+    {
+      "id": "project-7",
+      "title": "Fitness Tracker",
+      "date": "Nov 2022",
+      "status": "Regular",
+      "description": "Personal fitness tracking with workout logging and progress visualization",
+      "techStack": ["React", "Chart.js", "Local Storage"],
+      "image": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop",
+      "github": "https://github.com/yourusername/fitness-tracker",
+      "learned": ["Data visualization", "Progressive web apps"]
+    }
+  ],
+  "learning": [
+    {
+      "id": "learning-1",
+      "title": "Todo App Tutorial",
+      "date": "Sep 2022",
+      "status": "Learning",
+      "description": "Built while learning React fundamentals and state management",
+      "techStack": ["React", "useState", "CSS Modules"],
+      "github": "https://github.com/yourusername/react-todo",
+      "learned": ["React hooks", "Component lifecycle", "State management"]
+    },
+    {
+      "id": "learning-2",
+      "title": "Weather Dashboard",
+      "date": "Aug 2022",
+      "status": "Learning",
+      "description": "Practice project for API integration and responsive design",
+      "techStack": ["JavaScript", "OpenWeather API", "Bootstrap"],
+      "github": "https://github.com/yourusername/weather-dashboard",
+      "learned": ["API integration", "Async JavaScript", "Bootstrap framework"]
+    }
+  ]
+}
