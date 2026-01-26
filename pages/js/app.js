@@ -190,21 +190,6 @@ class PortfolioApp {
         profileCard.classList.remove("flipped");
       });
     }
-
-    // Trigger card animations
-    const tiles = document.querySelectorAll(
-      ".about-grid .card, .info-cards .card",
-    );
-
-    tiles.forEach((tile, index) => {
-      // Reset animation
-      tile.style.animation = "none";
-      tile.offsetHeight; // Force reflow
-
-      // Apply dark mode animation
-      tile.style.animation = `scaleIn 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) forwards`;
-      tile.style.animationDelay = `${index * 0.05}s`;
-    });
   }
 
   cycleTitles(element, titles) {

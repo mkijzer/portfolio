@@ -1376,7 +1376,7 @@ a:hover {
 .info-cards .card {
   position: relative;
   transform-style: preserve-3d;
-  animation: flipTileBack 0.3s ease-in-out forwards;
+  /* animation: flipTileBack 0.3s ease-in-out forwards; */
 }
 
 .about-grid .card > *,
@@ -1428,16 +1428,16 @@ a:hover {
 }
 
 /* Keyframe Animations */
-@keyframes flipTileBack {
+/* @keyframes flipTileBack {
   0% {
     transform: perspective(500px) rotateY(180deg);
   }
   100% {
     transform: perspective(500px) rotateY(0deg);
   }
-}
+} */
 
-@keyframes scaleIn {
+/* @keyframes scaleIn {
   0% {
     transform: scale(0.95);
     opacity: 0.8;
@@ -1446,7 +1446,7 @@ a:hover {
     transform: scale(1);
     opacity: 1;
   }
-}
+} */
 
 @keyframes rotate-cube {
   from {
@@ -1726,9 +1726,9 @@ a:hover {
     gap: var(--spacing-lg);
   }
 
-  .profile-card {
+  /* .profile-card {
     aspect-ratio: 1 / 1;
-  }
+  } */
 
   .info-cards {
     grid-template-columns: repeat(2, 1fr);
@@ -1943,12 +1943,12 @@ button:active,
 
   /* Fix mobile card positioning in high contrast */
   @media (max-width: 767px) {
-    .card-front,
+    /* .card-front,
     .card-back {
       position: relative;
       top: auto;
       left: auto;
       transform: none;
-    }
+    } */
   }
 }

@@ -1,0 +1,518 @@
+/* ==========================================================================
+   RESPONSIVE DESIGN - 2026 DESIGN SYSTEM
+   Mobile-first responsive breakpoints and accessibility features
+   ========================================================================== */
+
+/* ==========================================================================
+   MOBILE BREAKPOINT (767px and below)
+   ========================================================================== */
+
+/* Mobile Skills Layout */
+@media (max-width: 767px) {
+  .skills-categories {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+  }
+}
+
+/* ==========================================================================
+   TABLET BREAKPOINT (768px+)
+   ========================================================================== */
+
+@media (min-width: 768px) {
+  /* =============
+     LAYOUT CHANGES
+     ============= */
+  .portfolio-layout {
+    display: block;
+    padding-left: var(--sidebar-width);
+    padding-right: var(--spacing-lg);
+  }
+
+  /* =============
+     SIDEBAR DESKTOP LAYOUT
+     ============= */
+  .sidebar {
+    position: fixed;
+    top: var(--spacing-xl);
+    left: 0;
+    padding: var(--spacing-lg) var(--spacing-base);
+    flex-direction: column;
+    align-items: center;
+    width: var(--sidebar-width);
+    margin: 0;
+  }
+
+  .nav-header {
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 4rem;
+  }
+
+  .profile-picture {
+    width: 6rem;
+    height: 6rem;
+    margin-bottom: var(--spacing-base);
+    margin-right: 0;
+  }
+
+  .profile-name {
+    font-size: var(--font-size-xl);
+    text-align: center;
+  }
+
+  /* =============
+     NAVIGATION ENHANCEMENTS
+     ============= */
+  /* Show hidden nav links */
+  .nav-link[href="#portfolio"],
+  .nav-link[href="#about"],
+  .nav-link[href="#projects"] {
+    display: flex;
+  }
+
+  .nav-links {
+    justify-content: flex-end;
+    width: 140px;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-s);
+  }
+
+  .nav-link {
+    font-size: var(--font-size-base);
+    padding: var(--spacing-sm) var(--spacing-base);
+    margin: 0 auto;
+    border-radius: var(--border-radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--spacing-xs);
+    min-height: 3rem;
+    width: 140px;
+    background: transparent;
+    border: none;
+    transition: all 0.3s ease;
+  }
+
+  .contact-trigger .nav-icon {
+    color: var(--accent-color);
+    width: 16px;
+    height: 16px;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .contact-trigger:hover .nav-icon {
+    color: var(--accent-hover);
+    transform: translateY(-2px);
+  }
+
+  .nav-text {
+    display: inline;
+  }
+
+  /* =============
+     CONTENT SPACING
+     ============= */
+  .main-content {
+    padding: var(--spacing-base);
+    padding-left: var(--spacing-lg);
+  }
+
+  .page-header {
+    margin-top: var(--spacing-lg);
+    margin-left: 0;
+    padding: var(--spacing-lg);
+  }
+
+  .page-header h1 {
+    font-size: clamp(1rem, 3.5vw, 4rem);
+    margin: var(--spacing-base);
+    padding: var(--spacing-xl);
+    background: linear-gradient(
+      90deg,
+      var(--accent-color) 0%,
+      var(--accent-hover) 50%,
+      var(--accent-color) 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: left;
+  }
+
+  .dynamic-title {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    color: var(--text-primary);
+  }
+
+  /* =============
+     GRID LAYOUTS
+     ============= */
+  .about-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+  }
+
+  /* .profile-card {
+    aspect-ratio: 1 / 1;
+  } */
+
+  .info-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+  }
+
+  /* =============
+     SKILLS LAYOUT
+     ============= */
+  .skills-categories {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-base);
+  }
+
+  /* =============
+     FEATURED PROJECTS
+     ============= */
+  .featured-projects {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-2xl);
+  }
+
+  .featured-project-image {
+    height: 220px;
+  }
+
+  /* =============
+     CARD SIZING
+     ============= */
+  .card {
+    padding: var(--spacing-xl);
+    min-height: 200px;
+  }
+
+  .card h2 {
+    font-size: clamp(var(--font-size-xl), 4vw, var(--font-size-3xl));
+    margin-bottom: var(--spacing-base);
+  }
+
+  .card p {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-base);
+  }
+
+  .projectcard {
+    padding: var(--spacing-xl);
+  }
+
+  .projectcard h2 {
+    font-size: clamp(var(--font-size-xl), 4vw, var(--font-size-3xl));
+  }
+
+  .about-container {
+    padding: var(--spacing-xl);
+  }
+
+  /* =============
+     3D CUBE SIZING
+     ============= */
+  .cube-container {
+    width: 100px;
+    height: 100px;
+    perspective: 300px;
+  }
+
+  .side {
+    font-size: var(--font-size-sm);
+  }
+
+  .front {
+    transform: translateZ(50px);
+  }
+  .back {
+    transform: translateZ(-50px) rotateY(180deg);
+  }
+  .top {
+    transform: rotateX(90deg) translateZ(50px);
+  }
+  .bottom {
+    transform: rotateX(-90deg) translateZ(50px);
+  }
+  .left {
+    transform: rotateY(-90deg) translateZ(50px);
+  }
+  .right {
+    transform: rotateY(90deg) translateZ(50px);
+  }
+
+  /* =============
+     MODAL RESPONSIVE
+     ============= */
+  .project-modal-content {
+    max-width: 1200px;
+    max-height: 90vh;
+  }
+
+  /* =============
+     FORM ENHANCEMENTS
+     ============= */
+  .contact-header h2 {
+    font-size: clamp(var(--font-size-xl), 4vw, var(--font-size-3xl));
+  }
+
+  .contact-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-base);
+  }
+
+  .form-group:nth-child(4) {
+    grid-column: span 2;
+  }
+
+  .submit-btn {
+    grid-column: span 2;
+    justify-self: start;
+  }
+
+  /* =============
+     BUTTON LAYOUT
+     ============= */
+  .cta-buttons {
+    flex-direction: row;
+    gap: var(--spacing-base);
+  }
+
+  /* =============
+     FOOTER
+     ============= */
+  .site-footer {
+    padding: var(--spacing-2xl) var(--spacing-xl);
+    margin-top: var(--spacing-2xl);
+  }
+
+  .footer-content p {
+    font-size: var(--font-size-lg);
+  }
+}
+
+/* ==========================================================================
+   TABLET RANGE (768px - 1024px)
+   ========================================================================== */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .about-grid {
+    gap: var(--spacing-base);
+  }
+
+  .card {
+    padding: var(--spacing-lg);
+  }
+}
+
+/* ==========================================================================
+   LARGE DESKTOP BREAKPOINT (1200px+)
+   ========================================================================== */
+
+@media (min-width: 1200px) {
+  /* =============
+     SKILLS LAYOUT
+     ============= */
+  .skills-categories {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  /* =============
+     FEATURED PROJECTS
+     ============= */
+  .featured-projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .featured-project-card {
+    padding: var(--spacing-2xl);
+  }
+
+  .featured-project-image {
+    height: 240px;
+  }
+
+  /* =============
+     MODAL GRIDS
+     ============= */
+  .all-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .learning-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ==========================================================================
+   ACCESSIBILITY FEATURES
+   ========================================================================== */
+
+/* =============
+   REDUCED MOTION SUPPORT
+   Respects user's motion preferences
+   ============= */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+    transition-duration: 0.01ms;
+  }
+
+  .cube {
+    animation: none;
+  }
+}
+
+/* =============
+   FOCUS MANAGEMENT
+   Clean focus states without default browser outlines
+   ============= */
+.btn-primary:focus,
+.btn-secondary:focus,
+.btn-back:focus,
+.nav-link:focus,
+.contact-toggle:focus {
+  outline: none;
+}
+
+button:focus,
+button:active,
+.nav-link:focus,
+.nav-link:active {
+  outline: none;
+  border: none;
+}
+
+/* =============
+   HIGH CONTRAST MODE SUPPORT
+   Enhanced visibility for accessibility
+   ============= */
+@media (prefers-contrast: high) {
+  .card,
+  .sidebar,
+  .page-header {
+    border: 2px solid var(--text-primary);
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    border: 2px solid var(--accent-color);
+  }
+
+  /* Fix mobile card positioning in high contrast */
+  @media (max-width: 767px) {
+    /* .card-front,
+    .card-back {
+      position: relative;
+      top: auto;
+      left: auto;
+      transform: none;
+    } */
+  }
+}
+
+/* =============
+   PRINT STYLES
+   Optimized for printing
+   ============= */
+@media print {
+  /* Hide interactive elements */
+  .sidebar,
+  .btn-view-all,
+  .project-modal,
+  .contact-modal,
+  .nav-links {
+    display: none !important;
+  }
+
+  /* Adjust layout for print */
+  .portfolio-layout {
+    padding-left: 0;
+  }
+
+  .main-content {
+    padding: 0;
+  }
+
+  /* Optimize text for print */
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  .card,
+  .about-container {
+    background: white !important;
+    border: 1px solid #ccc !important;
+    box-shadow: none !important;
+  }
+
+  /* Ensure readable text */
+  .text-primary,
+  .text-secondary {
+    color: black !important;
+  }
+
+  .accent-color {
+    color: #333 !important;
+  }
+}
+
+/* =============
+   LANDSCAPE ORIENTATION (Mobile)
+   ============= */
+@media (max-width: 767px) and (orientation: landscape) {
+  .page-header {
+    margin-top: 4rem;
+  }
+
+  .sidebar {
+    padding: var(--spacing-xs);
+  }
+
+  .profile-picture {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+/* =============
+   ULTRA-WIDE SCREENS (1600px+)
+   ============= */
+@media (min-width: 1600px) {
+  .portfolio-layout {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-right: 0;
+  }
+
+  .main-content {
+    max-width: calc(1400px - var(--sidebar-width));
+  }
+}
+
+/* =============
+   COMPACT HEIGHT SCREENS
+   ============= */
+@media (max-height: 600px) {
+  .page-header {
+    margin-top: var(--spacing-base);
+  }
+
+  .card {
+    min-height: 100px;
+  }
+
+  .cube-container {
+    width: 50px;
+    height: 50px;
+  }
+}
