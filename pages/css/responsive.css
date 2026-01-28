@@ -7,11 +7,27 @@
    MOBILE BREAKPOINT (767px and below)
    ========================================================================== */
 
-/* Mobile Skills Layout */
 @media (max-width: 767px) {
+  /* Skills Layout - Mobile single column */
   .skills-categories {
     grid-template-columns: 1fr;
     gap: var(--spacing-sm);
+  }
+
+  /* Landscape orientation adjustments */
+  @media (orientation: landscape) {
+    .page-header {
+      margin-top: 4rem;
+    }
+
+    .sidebar {
+      padding: var(--spacing-xs);
+    }
+
+    .profile-picture {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
   }
 }
 
@@ -155,10 +171,6 @@
     grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-lg);
   }
-
-  /* .profile-card {
-    aspect-ratio: 1 / 1;
-  } */
 
   .info-cards {
     grid-template-columns: repeat(2, 1fr);
@@ -352,6 +364,22 @@
 }
 
 /* ==========================================================================
+   ULTRA-WIDE SCREENS (1600px+)
+   ========================================================================== */
+
+@media (min-width: 1600px) {
+  .portfolio-layout {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-right: 0;
+  }
+
+  .main-content {
+    max-width: calc(1400px - var(--sidebar-width));
+  }
+}
+
+/* ==========================================================================
    ACCESSIBILITY FEATURES
    ========================================================================== */
 
@@ -406,16 +434,27 @@ button:active,
   .btn-secondary {
     border: 2px solid var(--accent-color);
   }
+}
 
-  /* Fix mobile card positioning in high contrast */
-  @media (max-width: 767px) {
-    /* .card-front,
-    .card-back {
-      position: relative;
-      top: auto;
-      left: auto;
-      transform: none;
-    } */
+/* ==========================================================================
+   SPECIALIZED RESPONSIVE CONDITIONS
+   ========================================================================== */
+
+/* =============
+   COMPACT HEIGHT SCREENS
+   ============= */
+@media (max-height: 600px) {
+  .page-header {
+    margin-top: var(--spacing-base);
+  }
+
+  .card {
+    min-height: 100px;
+  }
+
+  .cube-container {
+    width: 50px;
+    height: 50px;
   }
 }
 
@@ -466,53 +505,16 @@ button:active,
   }
 }
 
-/* =============
-   LANDSCAPE ORIENTATION (Mobile)
-   ============= */
-@media (max-width: 767px) and (orientation: landscape) {
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .card,
+  .sidebar,
   .page-header {
-    margin-top: 4rem;
+    border: 2px solid var(--text-primary);
   }
 
-  .sidebar {
-    padding: var(--spacing-xs);
-  }
-
-  .profile-picture {
-    width: 2.5rem;
-    height: 2.5rem;
-  }
-}
-
-/* =============
-   ULTRA-WIDE SCREENS (1600px+)
-   ============= */
-@media (min-width: 1600px) {
-  .portfolio-layout {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding-right: 0;
-  }
-
-  .main-content {
-    max-width: calc(1400px - var(--sidebar-width));
-  }
-}
-
-/* =============
-   COMPACT HEIGHT SCREENS
-   ============= */
-@media (max-height: 600px) {
-  .page-header {
-    margin-top: var(--spacing-base);
-  }
-
-  .card {
-    min-height: 100px;
-  }
-
-  .cube-container {
-    width: 50px;
-    height: 50px;
+  .btn-primary,
+  .btn-secondary {
+    border: 2px solid var(--accent-color);
   }
 }

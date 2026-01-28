@@ -335,126 +335,6 @@
 }
 
 /* ==========================================================================
-   PROFILE & INTERACTIVE CARDS
-   ========================================================================== */
-
-/* Profile Card with Flip Animation */
-/* .profile-card {
-  position: relative;
-  perspective: 1000px;
-  transform-style: preserve-3d;
-  transition: transform 0.8s ease;
-} */
-
-/* .profile-card.flipped {
-  transform: rotateY(180deg);
-} */
-
-/* Card Front Side */
-/* .card-front {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: var(--spacing-lg);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  backface-visibility: hidden;
-  will-change: transform;
-} */
-
-/* Card Back Side */
-/* .card-back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: var(--spacing-lg);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  transform: rotateY(180deg);
-  backface-visibility: hidden;
-  will-change: transform;
-
-} */
-
-/* .profile-card.flipped .card-back {
-  opacity: 1;
-  visibility: visible;
-  transition:
-    opacity 0s 0.3s,
-    visibility 0s 0.3s;
-} */
-
-/* .profile-card.flipped .card-front {
-  opacity: 0;
-  visibility: hidden;
-  transition:
-    opacity 0s 0.3s,
-    visibility 0s 0.3s;
-} */
-
-/* Intro Text Styling */
-/* .intro-text {
-  text-align: left;
-  margin-bottom: var(--spacing-base);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-} */
-
-/* .intro-text h2,
-.intro-text p {
-  text-align: left;
-} */
-
-/* Bio Content */
-/* .bio-content {
-  text-align: left;
-  width: 100%;
-} */
-
-/* .bio-content h3 {
-  font-size: var(--font-size-xl);
-  margin-bottom: var(--spacing-base);
-  color: var(--accent-color);
-  font-weight: var(--font-weight-bold);
-} */
-
-/* .bio-points {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-sm);
-  margin-bottom: var(--spacing-lg);
-} */
-
-/* .bio-item {
-  font-size: var(--font-size-sm);
-  line-height: var(--line-height);
-  color: var(--text-secondary);
-  text-align: left;
-} */
-
-/* .bio-item::before {
-  content: attr(data-label) ": ";
-  font-weight: var(--font-weight-bold);
-  color: var(--accent-color);
-  display: inline-block;
-  margin-right: var(--spacing-xs);
-} */
-
-/* CTA Buttons */
-/* .cta-buttons {
-  display: flex;
-  gap: var(--spacing-sm);
-  flex-wrap: wrap;
-} */
-
-/* ==========================================================================
    PROJECT SHOWCASE
    ========================================================================== */
 
@@ -767,8 +647,6 @@
   width: 100%;
   height: 100%;
   position: relative;
-  transform-style: preserve-3d;
-  /* animation: rotate-cube 60s infinite linear; */
 }
 
 .side {
@@ -946,7 +824,6 @@
   height: 90vh;
   max-height: 90vh;
   margin: var(--spacing-xl);
-  animation: popUp 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
   position: relative;
 }
 
@@ -985,14 +862,6 @@
 }
 .modal-close span:nth-child(3) {
   transform: rotate(-45deg);
-}
-
-.modal-close.spin {
-  animation: close-spin 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
-.modal-close.spin span {
-  animation: orange-pulse 0.5s ease-in-out;
 }
 
 /* ==========================================================================
@@ -1158,4 +1027,442 @@
   color: var(--text-secondary);
   font-size: var(--font-size-base);
   margin: 0;
+}
+
+/* ==========================================================================
+   MODERN PORTFOLIO STYLES - 2026 DESIGN SYSTEM
+   Clean, semantic architecture with glassmorphism effects
+   Mobile-first responsive design with modern interactions
+   ========================================================================== */
+
+/* ==========================================================================
+   TABLE OF CONTENTS
+   ========================================================================== */
+/*
+   1. CSS RESET & BASE STYLES
+   2. TYPOGRAPHY & GLOBAL STYLES  
+   3. LAYOUT SYSTEMS
+   4. NAVIGATION COMPONENTS
+   5. GLASSMORPHISM SYSTEM
+   6. CARD COMPONENTS
+   7. BUTTON SYSTEM
+   8. PROFILE & INTERACTIVE CARDS
+   9. PROJECT SHOWCASE
+   10. SKILLS SECTION
+   11. MODAL COMPONENTS
+   12. FORM COMPONENTS
+   13. ANIMATIONS & TRANSITIONS
+   14. UTILITY CLASSES
+   15. RESPONSIVE DESIGN
+   16. ACCESSIBILITY
+*/
+
+/* ==========================================================================
+   3. LAYOUT SYSTEMS
+   ========================================================================== */
+
+/* Portfolio Layout Container */
+.portfolio-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-base);
+  min-height: 100vh;
+  width: 100%;
+  padding: 0 var(--spacing-sm);
+  box-sizing: border-box;
+}
+
+/* Main Content Container */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  padding: 0;
+  overflow-y: auto;
+  width: 100%;
+}
+
+/* Page Header */
+.page-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: var(--spacing-lg);
+  margin-top: 6rem;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-radius: var(--border-radius);
+  border: var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  position: relative;
+}
+
+.page-header h1 {
+  padding: var(--spacing-lg);
+  padding-left: var(--spacing-lg);
+  margin: 0;
+  font-size: clamp(1.4rem, 5vw, 2rem);
+  line-height: 1.15;
+  width: 100%;
+}
+
+/* Grid Layouts */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-base);
+}
+
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-base);
+}
+
+/* ==========================================================================
+   5. GLASSMORPHISM SYSTEM
+   Unified glass effect system for consistency across components
+   ========================================================================== */
+
+/* Base Glass Effect - Standard glass for sidebars, headers, modals */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  position: relative;
+}
+
+/* Light Glass for Cards and Interactive Elements */
+.glass-light {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-light::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 30% 20%,
+    rgba(247, 119, 55, 0.015) 0%,
+    transparent 50%
+  );
+  border-radius: inherit;
+  z-index: 0;
+}
+
+.glass-light:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transform: translateY(-4px);
+}
+
+.glass-light:hover::before {
+  background: radial-gradient(
+    circle at 30% 20%,
+    rgba(247, 119, 55, 0.025) 0%,
+    transparent 50%
+  );
+}
+
+/* Nested Glass - Very light for elements inside glass containers */
+.glass-nested {
+  background: var(--glass-nested-bg);
+  border: var(--glass-nested-border);
+  backdrop-filter: var(--glass-nested-blur);
+  -webkit-backdrop-filter: var(--glass-nested-blur);
+  box-shadow: var(--glass-nested-shadow);
+}
+
+/* ==========================================================================
+   8. PROFILE & INTERACTIVE CARDS
+   Profile cards with flip animations and interactive elements
+   ========================================================================== */
+
+/* Profile Card with Flip Animation */
+.profile-card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+  padding: 0;
+}
+
+.profile-card.flipped {
+  transform: rotateY(180deg);
+}
+
+/* Card Front Side */
+.card-front {
+  position: absolute;
+  top: -25%;
+  left: 41%;
+  transform: translateX(-50%);
+  width: 80%;
+  backface-visibility: hidden;
+  transition:
+    opacity 0s 0.3s,
+    visibility 0s 0.3s;
+}
+
+/* Card Back Side */
+.card-back {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  transform: translateX(-50%) rotateY(180deg);
+  width: 80%;
+  backface-visibility: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0s 0.3s,
+    visibility 0s 0.3s;
+}
+
+.profile-card.flipped .card-back {
+  opacity: 1;
+  visibility: visible;
+  transition:
+    opacity 0s 0.3s,
+    visibility 0s 0.3s;
+}
+
+.profile-card.flipped .card-front {
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0s 0.3s,
+    visibility 0s 0.3s;
+}
+
+/* Intro Text Styling */
+.intro-text {
+  text-align: left;
+  margin-bottom: var(--spacing-base);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.intro-text h2,
+.intro-text p {
+  text-align: left;
+}
+
+/* Bio Content */
+.bio-content {
+  text-align: left;
+  width: 100%;
+}
+
+.bio-content h3 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-base);
+  color: var(--accent-color);
+  font-weight: var(--font-weight-bold);
+}
+
+.bio-points {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-lg);
+}
+
+.bio-item {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height);
+  color: var(--text-secondary);
+  text-align: left;
+}
+
+.bio-item::before {
+  content: attr(data-label) ": ";
+  font-weight: var(--font-weight-bold);
+  color: var(--accent-color);
+  display: inline-block;
+  margin-right: var(--spacing-xs);
+}
+
+/* CTA Buttons */
+.cta-buttons {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+/* Modal Sections */
+.modal-section {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.modal-section:last-child {
+  margin-bottom: 0;
+}
+
+.section-header {
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin: 0 0 var(--spacing-xs) 0;
+}
+
+.section-icon {
+  font-size: var(--font-size-lg);
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+  font-size: var(--font-size-sm);
+  margin: 0;
+}
+
+/* Project Grids */
+.modal-projects-grid {
+  display: grid;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.featured-grid {
+  grid-template-columns: 1fr;
+}
+
+.all-grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-base);
+}
+
+.learning-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-base);
+}
+
+/* Modal Project Cards */
+.modal-project-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.modal-project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  border-color: rgba(247, 119, 55, 0.3);
+}
+
+.modal-project-card.selected {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px rgba(247, 119, 55, 0.3);
+}
+
+/* Featured cards - larger */
+.featured-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-xl);
+}
+
+/* Regular cards - standard */
+.regular-card,
+.learning-card {
+  padding: var(--spacing-lg);
+}
+
+/* ==========================================================================
+   13. ANIMATIONS & TRANSITIONS
+   Keyframe animations and dynamic effects
+   ========================================================================== */
+
+/* Card Entrance Animations */
+.about-grid .card,
+.info-cards .card {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.about-grid .card > *,
+.info-cards .card > * {
+  position: relative;
+  z-index: 1;
+  color: var(--text-color);
+  backface-visibility: visible;
+}
+
+.about-grid .card:nth-child(1),
+.info-cards .card:nth-child(1) {
+  animation-delay: 0s;
+}
+.about-grid .card:nth-child(2),
+.info-cards .card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.info-cards .card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.info-cards .card:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+/* ==========================================================================
+   16. ACCESSIBILITY
+   Accessibility improvements and user preferences
+   ========================================================================== */
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+    transition-duration: 0.01ms;
+  }
+
+  .cube {
+    animation: none;
+  }
+}
+
+/* Focus Indicators - Clean focus without outlines */
+.btn-primary:focus,
+.btn-secondary:focus,
+.btn-back:focus,
+.nav-link:focus,
+.contact-toggle:focus {
+  outline: none;
+}
+
+button:focus,
+button:active,
+.nav-link:focus,
+.nav-link:active {
+  outline: none;
+  border: none;
 }
