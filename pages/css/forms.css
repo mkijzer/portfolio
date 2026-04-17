@@ -1,0 +1,135 @@
+/* ==========================================================================
+   FORM COMPONENTS
+   ========================================================================== */
+
+/* Contact Section */
+.contact-section {
+  width: 100%;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-radius: var(--border-radius);
+  border: var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  overflow: hidden;
+  position: relative;
+}
+
+.contact-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-base);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-header:hover {
+  background: var(--form-hover-bg);
+}
+
+.contact-header h2 {
+  font-size: clamp(var(--font-size-lg), 3vw, var(--font-size-2xl));
+  margin: 0;
+  color: var(--text-primary);
+  font-weight: var(--font-weight-bold);
+}
+
+.contact-toggle {
+  background: none;
+  border: none;
+  color: var(--accent-color);
+  cursor: pointer;
+  padding: var(--spacing-xs);
+  border-radius: var(--border-radius-sm);
+  transition: transform 0.3s ease;
+}
+
+.contact-arrow {
+  transition: transform 0.3s ease;
+}
+
+.contact-section.expanded .contact-arrow {
+  transform: rotate(180deg);
+}
+
+.contact-form-container {
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.4s ease,
+    padding 0.4s ease;
+}
+
+.contact-section.expanded .contact-form-container {
+  max-height: 600px;
+  padding: 0 var(--spacing-base) var(--spacing-base);
+}
+
+/* Form Styling */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-base);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.form-group label {
+  font-size: var(--font-size-base);
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.form-group input,
+.form-group textarea {
+  padding: var(--spacing-sm);
+  background: var(--form-input-bg);
+  border: 1px solid var(--form-input-border);
+  border-radius: var(--border-radius-sm);
+  color: var(--text-primary);
+  font-size: var(--font-size-base);
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px var(--form-focus-shadow);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.submit-btn {
+  padding: clamp(0.5rem, 2vw, 0.75rem) clamp(1rem, 4vw, 1.5rem);
+  background: var(--btn-secondary-bg);
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  border-radius: var(--border-radius-sm);
+  font-size: clamp(var(--font-size-sm), 2vw, var(--font-size-base));
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+  align-self: flex-start;
+}
+
+.submit-btn:hover {
+  background-color: var(--btn-secondary-hover-bg);
+  color: var(--accent-hover);
+}

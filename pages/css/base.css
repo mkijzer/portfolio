@@ -22,12 +22,7 @@ body {
     Cantarell, sans-serif;
   color: var(--text-primary);
   line-height: var(--line-height);
-  background-image: radial-gradient(
-    ellipse farthest-corner at 59% 78%,
-    var(--accent-color) 0%,
-    hsl(12.96, 92.56%, 57.84%) 10%,
-    hsl(0, 0%, 12%) 50%
-  );
+  background-image: var(--bg-gradient);
   min-height: 100vh;
 }
 

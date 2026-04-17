@@ -1,10 +1,37 @@
-@keyframes rotate-cube {
-  from {
-    transform: rotateX(0) rotateY(0);
-  }
-  to {
-    transform: rotateX(360deg) rotateY(360deg);
-  }
+/* ==========================================================================
+   ANIMATIONS & TRANSITIONS
+   Keyframe animations and dynamic effects
+   ========================================================================== */
+
+/* Cube rotation animation */
+/* ==========================================================================
+   TILE LIGHT ANIMATION SYSTEM
+   Elegant light that moves around tile borders
+   ========================================================================== */
+
+/* Dynamic Title Animation */
+.dynamic-title {
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-secondary);
+  position: relative;
+  display: inline-block;
+  line-height: var(--line-height);
+  overflow: hidden;
+  perspective: 1000px;
+  background: linear-gradient(
+    90deg,
+    var(--accent-color) 0%,
+    var(--accent-hover) 50%,
+    var(--accent-color) 100%
+  );
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation:
+    slideInOutWithPause 7s infinite 0s,
+    gradientMove 1.5s ease-in-out infinite;
 }
 
 @keyframes gradientMove {
@@ -35,76 +62,6 @@
     transform: perspective(400px) rotateX(360deg);
     opacity: 1;
   }
-}
-
-@keyframes popUp {
-  from {
-    opacity: 0;
-    transform: scale(0.8) translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
-}
-
-@keyframes popOut {
-  from {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
-  to {
-    opacity: 0;
-    transform: scale(0.8) translateY(-30px);
-  }
-}
-
-@keyframes orange-pulse {
-  0% {
-    background: var(--accent-color);
-  }
-  50% {
-    background: var(--accent-hover);
-  }
-  100% {
-    background: var(--accent-color);
-  }
-}
-
-@keyframes close-spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* Dynamic Title Animation */
-.dynamic-title {
-  font-size: clamp(1rem, 3vw, 1.2rem);
-  font-weight: var(--font-weight-bold);
-  color: var(--text-secondary);
-  position: relative;
-  display: inline-block;
-  line-height: var(--line-height);
-  overflow: hidden;
-  perspective: 1000px;
-  background: linear-gradient(
-    90deg,
-    var(--accent-color) 0%,
-    var(--accent-hover) 50%,
-    var(--accent-color) 100%
-  );
-  background-size: 200% 100%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  animation:
-    slideInOutWithPause 7s infinite 0s,
-    gradientMove 1.5s ease-in-out infinite;
-}
-
-.cube {
-  transform-style: preserve-3d;
-  animation: rotate-cube 60s infinite linear;
 }
 
 /* Scroll Animations */
@@ -157,4 +114,46 @@
 
 .modal-close.spin span {
   animation: orange-pulse 0.5s ease-in-out;
+}
+
+/* Card Entrance Animations */
+.about-grid .card,
+.info-cards .card {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.about-grid .card > *,
+.info-cards .card > * {
+  position: relative;
+  z-index: 1;
+  color: var(--text-color);
+  backface-visibility: visible;
+}
+
+.about-grid .card:nth-child(1),
+.info-cards .card:nth-child(1) {
+  animation-delay: 0s;
+}
+.about-grid .card:nth-child(2),
+.info-cards .card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.info-cards .card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.info-cards .card:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+/* ==========================================================================
+   TECH CUBE 
+   ========================================================================== */
+@keyframes rotate-cube {
+  0% {
+    transform: rotateY(0deg) rotateX(15deg);
+  }
+  100% {
+    transform: rotateY(360deg) rotateX(15deg);
+  }
 }

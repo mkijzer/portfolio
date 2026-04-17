@@ -1,0 +1,169 @@
+/* ==========================================================================
+   PROJECT SHOWCASE
+   ========================================================================== */
+
+/* Project Section Container */
+.projectcard h2 {
+  padding-left: var(--spacing-lg);
+  font-size: clamp(var(--font-size-base), 3vw, var(--font-size-2xl));
+  margin: 0 0 var(--spacing-lg) 0;
+  color: var(--text-primary);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Featured Projects Grid */
+.featured-projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-2xl);
+  margin-bottom: var(--spacing-xl);
+}
+
+/* Featured Project Cards - Uses glass-light variable system */
+.featured-project-card {
+  display: grid;
+  grid-template-rows: auto 1fr;
+
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  cursor: pointer;
+  /* Glass light effects using variables */
+  background: var(--glass-light-bg);
+  backdrop-filter: var(--glass-light-blur);
+  -webkit-backdrop-filter: var(--glass-light-blur);
+  border: var(--glass-light-border);
+  box-shadow: var(--glass-light-shadow);
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.featured-project-image-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--border-radius-sm);
+}
+
+.featured-project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--glass-accent-subtle);
+  border-radius: inherit;
+  z-index: 0;
+}
+
+.featured-project-card:hover {
+  background: var(--glass-light-hover-bg);
+  border: var(--glass-light-hover-border);
+  box-shadow: var(--glass-light-hover-shadow);
+  transform: translateY(-4px);
+}
+
+.featured-project-card:hover::before {
+  background: var(--glass-accent-hover);
+}
+
+/* Project Images */
+.featured-project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: var(--spacing-lg);
+  transition: transform 0.3s ease;
+}
+
+.featured-project-card:hover .featured-project-image {
+  transform: scale(1.02);
+}
+
+/* Project Content */
+.featured-project-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.featured-project-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-base);
+}
+
+.featured-project-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  margin: 0;
+  color: var(--text-primary);
+  line-height: var(--line-height);
+}
+
+.featured-project-date {
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.featured-project-description {
+  font-size: var(--font-size-base);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0 0 auto 0;
+}
+
+/* Tech Stack Badges */
+.featured-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-lg);
+}
+
+.tech-badge {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background: var(--tech-badge-bg);
+  border: 1px solid var(--tech-badge-border);
+  border-radius: 20px;
+  font-size: var(--font-size-xs);
+  color: var(--accent-color);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Project Links */
+.featured-project-links {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-base);
+  background: transparent;
+  border: 1px solid var(--accent-color);
+  border-radius: var(--border-radius-sm);
+  color: var(--accent-color);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  transition: all 0.3s ease;
+}
+
+.project-link:hover {
+  background: var(--accent-color);
+  color: var(--text-primary);
+  transform: translateY(-1px);
+}
+
+.project-link svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}

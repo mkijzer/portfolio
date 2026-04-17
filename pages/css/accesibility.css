@@ -1,0 +1,30 @@
+/* ==========================================================================
+    16. ACCESSIBILITY
+    Accessibility improvements and user preferences
+    ========================================================================== */
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+    transition-duration: 0.01ms;
+  }
+}
+
+/* Focus Indicators - Clean focus without outlines */
+.btn-primary:focus,
+.btn-secondary:focus,
+.btn-back:focus,
+.nav-link:focus,
+.contact-toggle:focus {
+  outline: none;
+}
+
+button:focus,
+button:active,
+.nav-link:focus,
+.nav-link:active {
+  outline: none;
+  border: none;
+}

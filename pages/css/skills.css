@@ -1,0 +1,140 @@
+/* ==========================================================================
+    SKILLS SECTION
+    ========================================================================== */
+
+.about-container h2 {
+  font-size: clamp(var(--font-size-xl), 4vw, var(--font-size-3xl));
+  margin-bottom: var(--spacing-lg);
+  color: var(--text-primary);
+  text-align: center;
+  font-weight: var(--font-weight-bold);
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-base);
+}
+
+.about-content p {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height);
+  color: var(--text-secondary);
+  text-align: left;
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Skills Categories - Uses glass-light variable system */
+.skills-categories {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--spacing-base);
+}
+
+.skills-category {
+  background: var(--glass-light-bg);
+  backdrop-filter: var(--glass-light-blur);
+  -webkit-backdrop-filter: var(--glass-light-blur);
+  border: var(--glass-light-border);
+  box-shadow: var(--glass-light-shadow);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skills-category::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--glass-accent-subtle);
+  border-radius: inherit;
+  z-index: 0;
+}
+
+.skills-category:hover {
+  background: var(--glass-light-hover-bg);
+  border: var(--glass-light-hover-border);
+  box-shadow: var(--glass-light-hover-shadow);
+  transform: translateY(-4px);
+}
+
+.skills-category:hover::before {
+  background: var(--glass-accent-hover);
+}
+
+.category-title {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--accent-color);
+  text-align: center;
+  margin-bottom: var(--spacing-xs);
+  position: relative;
+  z-index: 1;
+}
+
+.skills-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  position: relative;
+  z-index: 1;
+}
+
+.skill-item {
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  text-align: center;
+  padding: var(--spacing-xs);
+  transition: all 0.3s ease;
+  border-radius: var(--border-radius-sm);
+}
+
+.skill-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+  color: var(--text-primary);
+}
+
+/* ==========================================================================
+   TECH LOGO GRID - Fourth Card
+   ========================================================================== */
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-sm);
+  padding: var(--spacing-base);
+  width: 100%;
+}
+
+.tech-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+  transition: transform 0.2s ease;
+}
+
+.tech-logo:hover {
+  transform: translateY(-2px);
+}
+
+.logo-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.logo-name {
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+  text-align: center;
+  font-weight: var(--font-weight-medium);
+}

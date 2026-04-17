@@ -1,126 +1,198 @@
 {
   "featured": [
     {
-      "id": "project-1",
-      "title": "Your Best Project",
-      "date": "Jan 2024 - Mar 2024",
-      "status": "Featured",
-      "description": "Brief description of what this project does and its main purpose",
-      "challenge": "What problem did you solve? What was the main technical challenge?",
-      "solution": "How did you build it? What technologies and approach did you use?",
-      "techStack": ["React", "Node.js", "MongoDB", "Tailwind CSS"],
-      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-      "github": "https://github.com/yourusername/project-1",
-      "liveDemo": "https://your-project-1.netlify.app",
+      "id": "level-up-or-die-trying",
+      "title": "LevelUpOrDieTrying.com",
+      "description": "Modern lifestyle magazine with data-driven content on health, wealth, and productivity",
+      "challenge": "Build a high-performance content platform without backend infrastructure while maintaining SEO integrity and mobile-first experience",
+      "solution": "Developed a modular vanilla JavaScript SPA using ES6 modules with JSON-driven content architecture and waterfall publishing system",
+      "techStack": {
+        "primary": ["Vanilla JavaScript", "JSON CMS", "SEO"],
+        "secondary": ["HTML5", "CSS3", "Node.js", "Google Analytics"]
+      },
+      "images": [
+        "/assets/images/projects/level-up-or-die-trying/screenshot-1-homepage-desktop.png",
+        "/assets/images/projects/level-up-or-die-trying/screenshot-2-desktop-carroussel.png",
+        "/assets/images/projects/level-up-or-die-trying/screenshot-3-article-desktop.png"
+      ],
+      "github": "https://github.com/mkijzer/Levelup",
+      "liveDemo": "https://levelupordietrying.com",
       "learned": [
-        "Advanced React patterns",
-        "API optimization",
-        "User experience design"
+        "Modular ES6 architecture improves maintainability",
+        "Fixed data boundaries prevent SEO disasters",
+        "Mobile-first CSS scales better than utility approaches",
+        "Vanilla JavaScript can match framework performance"
       ]
     },
     {
-      "id": "project-2",
-      "title": "Second Best Project",
-      "date": "Oct 2023 - Dec 2023",
-      "status": "Featured",
-      "description": "Another impressive project showcasing different skills",
-      "challenge": "Different technical challenge you overcame",
-      "solution": "Your solution approach and implementation details",
-      "techStack": ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
-      "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=600&fit=crop",
-      "github": "https://github.com/yourusername/project-2",
-      "liveDemo": "https://your-project-2.vercel.app",
+      "id": "calendar-planner",
+      "title": "Calendar Planner",
+      "description": "Full-stack calendar with RESTful API, Prisma ORM, and modular ES6 architecture",
+      "challenge": "Build a complex calendar requiring state synchronization across multiple views with proper timezone handling",
+      "solution": "Node.js/Express REST API with Prisma ORM and SQLite, ES6 modular frontend with observer pattern for state management",
+      "techStack": {
+        "primary": ["Prisma ORM", "Observer Pattern", "Neumorphic UI"],
+        "secondary": [
+          "Node.js",
+          "Express",
+          "SQLite",
+          "Vanilla JavaScript",
+          "RESTful API"
+        ]
+      },
+      "images": [
+        "assets/images/projects/calender/Screenshot-1-desktop-darkmode.png",
+        "assets/images/projects/calender/screenshot-2-desktop-lightmode.png",
+        "assets/images/projects/calender/screenshot-3-form-lightmode.png"
+      ],
+      "github": "https://github.com/mkijzer/Planner",
+      "liveDemo": "",
       "learned": [
-        "TypeScript integration",
-        "Database design",
-        "Performance optimization"
+        "Observer pattern enables real-time UI sync across multiple components without prop drilling",
+        "Prisma ORM migrations handle schema changes more reliably than raw SQL",
+        "Neumorphic design with dual shadows (inset + outset) creates tactile 3D interfaces",
+        "ISO date strings prevent timezone bugs when filtering events across different views"
       ]
     },
     {
-      "id": "project-3",
-      "title": "Third Featured Project",
-      "date": "Jul 2023 - Sep 2023",
-      "status": "Featured",
-      "description": "Third project demonstrating your range of capabilities",
-      "challenge": "Another interesting problem you solved",
-      "solution": "Your creative solution and technical implementation",
-      "techStack": ["Vue.js", "Express", "Socket.io", "Redis"],
-      "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=600&fit=crop",
-      "github": "https://github.com/yourusername/project-3",
-      "liveDemo": "https://your-project-3.herokuapp.com",
+      "id": "portoquiz",
+      "title": "PortoQuiz",
+      "description": "Interactive quiz application testing knowledge about Porto, Portugal with timed questions and leaderboards",
+      "challenge": "Build a full-stack quiz application demonstrating modern web development practices without frameworks",
+      "solution": "Vanilla JavaScript SPA with Express backend, SQLite database, OKLCH color system, and keyboard navigation",
+      "techStack": {
+        "primary": ["OKLCH Colors", "Keyboard UX", "SQLite"],
+        "secondary": ["Vanilla JavaScript", "Express.js", "CORS", "Node.js"]
+      },
+      "images": [
+        "assets/images/projects/quiz-app/screenshot-1-desktop-homescreen.png",
+        "assets/images/projects/quiz-app/screenshot-2-mobile-homescreen.png",
+        "assets/images/projects/quiz-app/screenshot-3-mobile-amount.png"
+      ],
+      "github": "https://github.com/mkijzer/PortoQuiz",
+      "liveDemo": "",
       "learned": [
-        "Real-time communication",
-        "State management",
-        "Scalable architecture"
+        "OKLCH color space with single-hue theming creates more perceptually uniform palettes than HSL",
+        "Keyboard shortcut systems (Enter/Escape/Number keys) require careful event delegation to prevent conflicts",
+        "Timer-based quiz mechanics need proper cleanup with clearInterval to prevent memory leaks",
+        "SQLite leaderboard ranking with SQL ORDER BY and LIMIT taught database query optimization"
       ]
     }
   ],
   "all": [
     {
-      "id": "project-4",
-      "title": "Social Media App",
-      "date": "May 2023",
-      "status": "Regular",
-      "description": "Social platform with user interactions and content sharing",
-      "techStack": ["React", "Firebase", "Material-UI"],
-      "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&h=300&fit=crop",
-      "github": "https://github.com/yourusername/social-media-app",
-      "learned": ["Authentication", "Real-time updates"]
+      "id": "duurt-lang-countdown",
+      "title": "Interactive Ski Trip Countdown",
+      "description": "Interactive countdown app with SVG path masking, weather API, and themed animations for ski trip",
+      "techStack": {
+        "primary": ["SVG Path Masking", "OpenWeatherMap API"],
+        "secondary": ["Vanilla JavaScript", "ES6 Modules", "CSS Animations"]
+      },
+      "images": [
+        "assets/images/projects/duurt-lang-countdown/screenshot1.jpg",
+        "assets/images/projects/duurt-lang-countdown/screenshot2.jpg",
+        "assets/images/projects/duurt-lang-countdown/screenshot3.jpg"
+      ],
+      "github": "https://github.com/mkijzer/duurt-lang-countdown",
+      "liveDemo": ""
     },
     {
-      "id": "project-5",
-      "title": "Recipe Finder",
-      "date": "Mar 2023",
-      "status": "Regular",
-      "description": "Recipe discovery app with search and filtering capabilities",
-      "techStack": ["JavaScript", "API Integration", "CSS Grid"],
-      "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop",
-      "github": "https://github.com/yourusername/recipe-finder",
-      "learned": ["API consumption", "Search algorithms"]
+      "id": "totempaal-interactive-showcase",
+      "title": "Totempaal Interactive Showcase",
+      "description": "Interactive 3D rotating cubes showcase with auto-scrolling text for art project presentation",
+      "techStack": {
+        "primary": ["CSS 3D Transforms", "requestAnimationFrame"],
+        "secondary": ["Vanilla JavaScript", "Web3Forms API"]
+      },
+      "images": [
+        "assets/images/projects/totempaal-interactive-showcase/screenshot1.jpg",
+        "assets/images/projects/totempaal-interactive-showcase/screenshot2.jpg",
+        "assets/images/projects/totempaal-interactive-showcase/screenshot3.jpg"
+      ],
+      "github": "https://github.com/mkijzer/totempaal-showcase",
+      "liveDemo": ""
     },
     {
-      "id": "project-6",
-      "title": "Music Player",
-      "date": "Jan 2023",
-      "status": "Regular",
-      "description": "Custom music player with playlist management and audio controls",
-      "techStack": ["Vanilla JS", "Web Audio API", "CSS Animations"],
-      "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
-      "github": "https://github.com/yourusername/music-player",
-      "learned": ["Audio APIs", "Custom controls"]
+      "id": "beer-tasting-form",
+      "title": "Jorrit's Bierproeverij",
+      "description": "Comprehensive beer tasting evaluation form with detailed scoring system for aroma, taste, mouthfeel, and visual characteristics",
+      "techStack": {
+        "primary": ["LocalStorage API", "URL Parameters", "Glassmorphic UI"],
+        "secondary": ["JavaScript", "HTML5", "CSS3", "ES6 Modules"]
+      },
+      "images": [
+        "assets/images/projects/beer-tasting-form/screenshot1.jpg",
+        "assets/images/projects/beer-tasting-form/screenshot2.jpg",
+        "assets/images/projects/beer-tasting-form/screenshot3.jpg"
+      ],
+      "github": "https://github.com/mkijzer/beer-tasting-form",
+      "liveDemo": ""
     },
     {
-      "id": "project-7",
-      "title": "Fitness Tracker",
-      "date": "Nov 2022",
-      "status": "Regular",
-      "description": "Personal fitness tracking with workout logging and progress visualization",
-      "techStack": ["React", "Chart.js", "Local Storage"],
-      "image": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop",
-      "github": "https://github.com/yourusername/fitness-tracker",
-      "learned": ["Data visualization", "Progressive web apps"]
+      "id": "tic-tac-toe-game",
+      "title": "Tic-Tac-Toe Game",
+      "description": "Interactive tic-tac-toe game with single-player AI opponent, two-player mode, score tracking, and three distinct visual themes",
+      "techStack": {
+        "primary": ["AI Opponent", "Theme System", "Sequential Animations"],
+        "secondary": ["JavaScript", "CSS Grid", "Vanilla JS"]
+      },
+      "images": [
+        "assets/images/projects/tic-tac-toe-game/screenshot1.jpg",
+        "assets/images/projects/tic-tac-toe-game/screenshot2.jpg",
+        "assets/images/projects/tic-tac-toe-game/screenshot3.jpg"
+      ],
+      "github": "https://github.com/mkijzer/tic-tac-toe-game",
+      "liveDemo": ""
+    },
+    {
+      "id": "lamonizer-timer",
+      "title": "Lamonizer Timer",
+      "description": "Pomodoro timer with 50-minute work sessions and 10-minute break tracking",
+      "techStack": {
+        "primary": ["Timer State Management", "Session Tracking"],
+        "secondary": ["JavaScript", "ES6 Modules"]
+      },
+      "images": [
+        "assets/images/projects/lamonizer-timer/screenshot1.jpg",
+        "assets/images/projects/lamonizer-timer/screenshot2.jpg",
+        "assets/images/projects/lamonizer-timer/screenshot3.jpg"
+      ],
+      "github": "https://github.com/mkijzer/lamonizer-timer",
+      "liveDemo": ""
     }
   ],
   "learning": [
     {
-      "id": "learning-1",
-      "title": "Todo App Tutorial",
-      "date": "Sep 2022",
-      "status": "Learning",
-      "description": "Built while learning React fundamentals and state management",
-      "techStack": ["React", "useState", "CSS Modules"],
-      "github": "https://github.com/yourusername/react-todo",
-      "learned": ["React hooks", "Component lifecycle", "State management"]
+      "id": "event-management-app",
+      "title": "Event Management Application",
+      "description": "Full-featured event management web app with category filtering, search functionality, CRUD operations, and user profiles",
+      "techStack": {
+        "primary": ["React", "Chakra UI", "React Router"],
+        "secondary": ["Vite", "REST API", "JavaScript"]
+      },
+      "images": [
+        "assets/images/projects/event-management-app/screenshot1.jpg",
+        "assets/images/projects/event-management-app/screenshot2.jpg",
+        "assets/images/projects/event-management-app/screenshot3.jpg"
+      ],
+      "github": "https://github.com/mkijzer/event-management-app",
+      "liveDemo": ""
     },
     {
-      "id": "learning-2",
-      "title": "Weather Dashboard",
-      "date": "Aug 2022",
-      "status": "Learning",
-      "description": "Practice project for API integration and responsive design",
-      "techStack": ["JavaScript", "OpenWeather API", "Bootstrap"],
-      "github": "https://github.com/yourusername/weather-dashboard",
-      "learned": ["API integration", "Async JavaScript", "Bootstrap framework"]
+      "id": "bookings-rest-api",
+      "title": "Bookings REST API",
+      "description": "Full-featured booking management REST API with authentication, CRUD operations, and automated testing",
+      "techStack": {
+        "primary": ["JWT Authentication", "Prisma ORM", "Sentry"],
+        "secondary": ["Node.js", "Express.js", "SQLite", "Winston", "Newman"]
+      },
+      "images": [
+        "assets/images/projects/bookings-rest-api/screenshot1.jpg",
+        "assets/images/projects/bookings-rest-api/screenshot2.jpg",
+        "assets/images/projects/bookings-rest-api/screenshot3.jpg"
+      ],
+      "github": "https://github.com/mkijzer/bookings-rest-api",
+      "liveDemo": ""
     }
   ]
 }

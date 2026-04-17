@@ -5,17 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mike's Portfolio</title>
     <link rel="stylesheet" href="css/variables.css" />
-    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/glass.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/navigation.css" />
+    <link rel="stylesheet" href="css/cards.css" />
+    <link rel="stylesheet" href="css/buttons.css" />
+    <link rel="stylesheet" href="css/projects.css" />
+    <link rel="stylesheet" href="css/modals.css" />
+    <link rel="stylesheet" href="css/forms.css" />
+    <link rel="stylesheet" href="css/skills.css" />
+    <link rel="stylesheet" href="css/utilities.css" />
     <link rel="stylesheet" href="css/animations.css" />
     <link rel="stylesheet" href="css/responsive.css" />
-    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/accesibility.css" />
+    <link rel="stylesheet" href="css/image-gallery.css" />
   </head>
   <body>
     <div class="portfolio-layout">
       <nav class="sidebar glass">
         <div class="nav-header">
           <img
-            src="images/profilePicture.png"
+            src="/images/duckie.jpeg"
             alt="Mike's profile picture"
             class="profile-picture"
           />
@@ -31,7 +42,7 @@
                   x2="13"
                   y2="5"
                   stroke="currentColor"
-                  stroke-width="1.5"
+                  stroke-width="1"
                 />
                 <line
                   x1="3"
@@ -39,7 +50,7 @@
                   x2="13"
                   y2="8"
                   stroke="currentColor"
-                  stroke-width="1.5"
+                  stroke-width="1"
                 />
                 <line
                   x1="3"
@@ -47,7 +58,7 @@
                   x2="13"
                   y2="11"
                   stroke="currentColor"
-                  stroke-width="1.5"
+                  stroke-width="1"
                 />
               </svg>
               <span>Portfolio</span>
@@ -132,7 +143,7 @@
       </nav>
       <main class="main-content">
         <header class="page-header glass">
-          <h1>Fullstack Developer & Digital Craftsman</h1>
+          <h1>Design, Code, Iterate</h1>
         </header>
 
         <section id="portfolio" class="about-grid">
@@ -140,17 +151,23 @@
           <article class="profile-card card glass">
             <div class="card-back">
               <div class="bio-content">
-                <h3>About Mike</h3>
+                <h3>Personal Qualities</h3>
                 <div class="bio-points">
-                  <div class="bio-item" data-label="Experience">
-                    Self-taught developer with 2+ years building modern web
-                    applications
+                  <div class="bio-item" data-label="Adaptable">
+                    Quick to learn new technologies and adjust to changing
+                    project requirements
                   </div>
-                  <div class="bio-item" data-label="Focus">
-                    React, Node.js, and responsive design
+                  <div class="bio-item" data-label="Detail-Oriented">
+                    Focused on code quality, testing, and delivering polished
+                    user experiences
                   </div>
-                  <div class="bio-item" data-label="Passion">
-                    Creating clean, efficient code and learning new technologies
+                  <div class="bio-item" data-label="Problem Solver">
+                    Enjoys tackling complex challenges and finding elegant
+                    solutions
+                  </div>
+                  <div class="bio-item" data-label="Self-Taught">
+                    Passionate about continuous learning and staying current
+                    with tech trends
                   </div>
                 </div>
                 <button class="btn-back">
@@ -202,6 +219,27 @@
           </article>
           <div class="info-cards">
             <article class="card glass">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="60"
+                height="60"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#ff7b28"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-file-badge-icon lucide-file-badge"
+              >
+                <path
+                  d="M13 22h5a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v3.3"
+                />
+                <path d="M14 2v5a1 1 0 0 0 1 1h5" />
+                <path
+                  d="m7.69 16.479 1.29 4.88a.5.5 0 0 1-.698.591l-1.843-.849a1 1 0 0 0-.879.001l-1.846.85a.5.5 0 0 1-.692-.593l1.29-4.88"
+                />
+                <circle cx="6" cy="14" r="3" />
+              </svg>
               <h3>Certified & Selftaught</h3>
               <div class="certification-text">
                 <!-- <span class="cert-role">front-end & back-end developer</span> -->
@@ -210,26 +248,43 @@
               </div>
             </article>
             <article class="card glass">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="60"
+                height="60"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#ff7b28"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-book-open-check-icon lucide-book-open-check"
+              >
+                <path d="M12 21V7" />
+                <path d="m16 12 2 2 4-4" />
+                <path
+                  d="M22 6V4a1 1 0 0 0-1-1h-5a4 4 0 0 0-4 4 4 4 0 0 0-4-4H3a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6a1 1 0 0 0 1-1v-1.3"
+                />
+              </svg>
               <h3>Passion for Learning</h3>
               <!-- <p>passion for learning</p> -->
             </article>
             <article class="card glass">
               <h3>Modern Stack</h3>
-              <!-- <ul>
-                <li>React</li>
-                <li>Node.js</li>
-                <li>Prisma</li>
-                <li>Responsive Design</li>
-              </ul> -->
             </article>
-            <article class="card glass">
+            <article class="card glass no-blur">
               <div class="cube-container">
                 <div class="cube">
                   <div class="side front">Adaptable</div>
+
                   <div class="side back">Detail-Oriented</div>
+
                   <div class="side top">Creative Thinker</div>
+
                   <div class="side bottom">Problem Solver</div>
+
                   <div class="side left">Self-Taught</div>
+
                   <div class="side right">Design-Focussed</div>
                 </div>
               </div>
@@ -282,7 +337,7 @@
                 <!-- <h3>My Skills</h3> -->
                 <div class="skills-categories">
                   <div class="skills-category">
-                    <h4 class="category-title">🤖 AI Development</h4>
+                    <h4 class="category-title">AI Development</h4>
                     <div class="skills-grid">
                       <div class="skill-item">AI-Assisted Coding</div>
                       <div class="skill-item">Prompt Engineering</div>
@@ -291,7 +346,7 @@
                   </div>
 
                   <div class="skills-category">
-                    <h4 class="category-title">💻 Frontend</h4>
+                    <h4 class="category-title">Frontend</h4>
                     <div class="skills-grid">
                       <div class="skill-item">React & JavaScript</div>
                       <div class="skill-item">Modern CSS</div>
@@ -300,7 +355,7 @@
                   </div>
 
                   <div class="skills-category">
-                    <h4 class="category-title">⚙️ Backend</h4>
+                    <h4 class="category-title">Backend</h4>
                     <div class="skills-grid">
                       <div class="skill-item">Node.js & APIs</div>
                       <div class="skill-item">Database Design</div>
@@ -309,7 +364,7 @@
                   </div>
 
                   <div class="skills-category">
-                    <h4 class="category-title">🎨 Design</h4>
+                    <h4 class="category-title">Design</h4>
                     <div class="skills-grid">
                       <div class="skill-item">User Experience</div>
                       <div class="skill-item">Interface Design</div>
@@ -318,7 +373,7 @@
                   </div>
 
                   <div class="skills-category">
-                    <h4 class="category-title">🚀 Workflow</h4>
+                    <h4 class="category-title">Workflow</h4>
                     <div class="skills-grid">
                       <div class="skill-item">Modern Development</div>
                       <div class="skill-item">Clean Code Practices</div>
@@ -366,5 +421,11 @@
     </div>
 
     <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/animations.js"></script>
+    <script type="module" src="js/cards.js"></script>
+    <script type="module" src="js/contact.js"></script>
+    <script type="module" src="js/navigation.js"></script>
+    <script type="module" src="js/projects.js"></script>
+    <script type="module" src="js/image-gallery.js"></script>
   </body>
 </html>

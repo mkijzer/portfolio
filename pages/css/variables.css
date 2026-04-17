@@ -49,6 +49,12 @@
   /* Background Colors */
   --bg-primary: hsl(165, 33.33%, 2.35%); /* Dark background */
   --bg-card: hsl(0, 0%, 8%); /* Card background */
+  --bg-gradient: radial-gradient(
+    ellipse farthest-corner at 59% 78%,
+    var(--accent-color) 0%,
+    hsl(12.96, 92.56%, 57.84%) 10%,
+    hsl(0, 0%, 12%) 50%
+  ); /* Main background gradient */
 
   /* =============
      GLASSMORPHISM SYSTEM
@@ -111,6 +117,25 @@
   --skills-card-bg: var(--glass-light-bg);
   --skills-card-border: var(--glass-light-border);
   --skills-card-shadow: var(--glass-light-shadow);
+
+  /* Tech Badge Components */
+  --tech-badge-bg: rgba(247, 119, 55, 0.1);
+  --tech-badge-border: rgba(247, 119, 55, 0.2);
+
+  /* Button Components */
+  --btn-secondary-bg: rgba(255, 255, 255, 0.08);
+  --btn-secondary-hover-bg: rgba(247, 119, 55, 0.1);
+
+  /* Form Components */
+  --form-input-bg: rgba(255, 255, 255, 0.05);
+  --form-input-border: rgba(255, 255, 255, 0.1);
+  --form-hover-bg: rgba(255, 255, 255, 0.05);
+  --form-focus-shadow: rgba(247, 119, 55, 0.2);
+
+  /* Modal Components */
+  --modal-backdrop-dark: rgba(0, 0, 0, 0.8);
+  --modal-backdrop-light: rgba(0, 0, 0, 0.5);
+  --modal-hover-bg: rgba(255, 255, 255, 0.1);
 
   /* =============
      LAYOUT SYSTEM

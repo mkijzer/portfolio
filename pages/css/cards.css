@@ -1,0 +1,231 @@
+/* ==========================================================================
+   CARD COMPONENTS
+   ========================================================================== */
+
+/* Base Card Styling */
+.card {
+  padding: 0;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-radius: var(--border-radius);
+  border: var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 150px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-icon {
+  margin-bottom: var(--spacing-base);
+  width: 64px;
+  height: 64px;
+}
+
+.card h2 {
+  font-size: clamp(var(--font-size-lg), 3vw, var(--font-size-2xl));
+  margin-bottom: var(--spacing-base);
+  color: var(--text-primary);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height);
+  text-align: center;
+}
+
+.card h3 {
+  font-size: var(--font-size-xs);
+  margin-top: var(--spacing-base);
+}
+
+.card p {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height);
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.card li {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height);
+  padding: var(--spacing-xs) 0;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+/* ==========================================================================
+   PROFILE & INTERACTIVE CARDS
+   Profile cards with flip animations and interactive elements
+   ========================================================================== */
+
+/* Profile Card with Flip Animation */
+.profile-card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+  padding: 0;
+}
+
+.profile-card.flipped {
+  transform: rotateY(180deg);
+}
+
+/* Card Front Side */
+.card-front {
+  position: absolute;
+  top: -25%;
+  left: 41%;
+  transform: translateX(-50%);
+  width: 80%;
+  backface-visibility: hidden;
+  transition:
+    opacity 0s 0.3s,
+    visibility 0s 0.3s;
+}
+
+/* Card Back Side */
+.card-back {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  transform: translateX(-50%) rotateY(180deg);
+  width: 80%;
+  backface-visibility: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0s 0.3s,
+    visibility 0s 0.3s;
+}
+
+.profile-card.flipped .card-back {
+  opacity: 1;
+  visibility: visible;
+  transition:
+    opacity 0s 0.3s,
+    visibility 0s 0.3s;
+}
+
+.profile-card.flipped .card-front {
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0s 0.3s,
+    visibility 0s 0.3s;
+}
+
+/* Intro Text Styling */
+.intro-text {
+  text-align: left;
+  margin-bottom: var(--spacing-base);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.intro-text h2,
+.intro-text p {
+  text-align: left;
+}
+
+/* Bio Content */
+.bio-content {
+  text-align: left;
+  width: 100%;
+}
+
+.bio-content h3 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-base);
+  color: var(--accent-color);
+  font-weight: var(--font-weight-bold);
+}
+
+.bio-points {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-lg);
+}
+
+.bio-item {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height);
+  color: var(--text-secondary);
+  text-align: left;
+}
+
+.bio-item::before {
+  content: attr(data-label) ": ";
+  font-weight: var(--font-weight-bold);
+  color: var(--accent-color);
+  display: inline-block;
+  margin-right: var(--spacing-xs);
+} /* ==========================================================================
+   TECH CUBE 
+   ========================================================================== */
+/* ==========================================================================
+   TECH CUBE 
+   ========================================================================== */
+
+.cube-container {
+  width: 80px;
+  height: 80px;
+  perspective: 800px;
+  margin: auto;
+  position: relative;
+}
+
+.cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  /* animation: rotate-cube 12s linear infinite; */
+}
+
+.side {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+  background: linear-gradient(135deg, var(--accent-color), var(--accent-dark));
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.side.front {
+  transform: translateZ(40px);
+}
+.side.back {
+  transform: translateZ(-40px) rotateY(180deg);
+}
+.side.top {
+  transform: rotateX(90deg) translateZ(40px);
+}
+.side.bottom {
+  transform: rotateX(-90deg) translateZ(40px);
+}
+.side.left {
+  transform: rotateY(-90deg) translateZ(40px);
+}
+.side.right {
+  transform: rotateY(90deg) translateZ(40px);
+}

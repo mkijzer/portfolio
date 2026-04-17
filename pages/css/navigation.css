@@ -1,0 +1,110 @@
+/* ==========================================================================
+   NAVIGATION COMPONENTS
+   ========================================================================== */
+
+/* Mobile Sidebar Navigation */
+.sidebar {
+  position: fixed;
+  top: var(--spacing-sm);
+  left: var(--spacing-sm);
+  right: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-radius: var(--border-radius);
+  border: var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  z-index: 1000;
+}
+
+/* Navigation Header */
+.nav-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 0;
+}
+
+.profile-picture {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0;
+  margin-right: var(--spacing-sm);
+  border: 2px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+.profile-name {
+  color: var(--text-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height);
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  flex-wrap: nowrap;
+  gap: var(--spacing-xs);
+}
+
+.nav-links li {
+  min-height: 2rem;
+  flex-shrink: 1;
+}
+
+.nav-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  text-decoration: none;
+  min-height: 2rem;
+  white-space: nowrap;
+  line-height: var(--line-height);
+  background: transparent;
+  border-radius: var(--border-radius-sm);
+  transition:
+    background 0.4s ease,
+    color 0.3s ease;
+}
+
+/* Hide specific nav links on mobile, keep contact */
+.nav-link[href="#portfolio"],
+.nav-link[href="#about"],
+.nav-link[href="#projects"] {
+  display: none;
+}
+
+.nav-text {
+  display: none;
+}
+
+/* Navigation Icons */
+.nav-icon {
+  margin-right: var(--spacing-xs);
+  color: inherit;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.contact-trigger .nav-icon,
+.contact-icon {
+  width: 20px;
+  height: 20px;
+}

@@ -1,0 +1,54 @@
+/* ==========================================================================
+   5. GLASSMORPHISM SYSTEM
+   Unified glass effect system for consistency across components
+   ========================================================================== */
+
+/* Base Glass Effect - Standard glass for sidebars, headers, modals */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  position: relative;
+}
+
+/* Light Glass for Cards and Interactive Elements */
+.glass-light {
+  background: var(--glass-light-bg);
+  backdrop-filter: var(--glass-light-blur);
+  -webkit-backdrop-filter: var(--glass-light-blur);
+  border: var(--glass-light-border);
+  box-shadow: var(--glass-light-shadow);
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-light::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--glass-accent-subtle);
+  border-radius: inherit;
+  z-index: 0;
+}
+
+.glass-light:hover {
+  background: var(--glass-light-hover-bg);
+  border: var(--glass-light-hover-border);
+  box-shadow: var(--glass-light-hover-shadow);
+  transform: translateY(-4px);
+}
+
+.glass-light:hover::before {
+  background: var(--glass-accent-hover);
+}
+
+/* Nested Glass - Very light for elements inside glass containers */
+.glass-nested {
+  background: var(--glass-nested-bg);
+  border: var(--glass-nested-border);
+  backdrop-filter: var(--glass-nested-blur);
+  -webkit-backdrop-filter: var(--glass-nested-blur);
+  box-shadow: var(--glass-nested-shadow);
+}

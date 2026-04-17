@@ -55,14 +55,16 @@
     padding: var(--spacing-lg) var(--spacing-base);
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
     width: var(--sidebar-width);
     margin: 0;
+    height: calc(100vh - var(--spacing-2xl));
   }
 
   .nav-header {
     flex-direction: column;
     width: 100%;
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
   }
 
   .profile-picture {
@@ -88,7 +90,7 @@
   }
 
   .nav-links {
-    justify-content: flex-end;
+    justify-content: flex-start;
     width: 140px;
     flex-direction: column;
     align-items: center;
@@ -155,6 +157,40 @@
     -webkit-background-clip: text;
     color: transparent;
     text-align: left;
+    position: relative;
+  }
+
+  .page-header h1::after {
+    content: "Design, Code, Iterate";
+    position: absolute;
+    top: 100%;
+    left: 2rem;
+    right: 0;
+    background: linear-gradient(
+      90deg,
+      var(--accent-color) 0%,
+      var(--accent-hover) 50%,
+      var(--accent-color) 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    opacity: 0.08;
+    transform: scaleY(-1);
+    transform-origin: top;
+    mask: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.4) 50%,
+      transparent 100%
+    );
+    -webkit-mask: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.4) 50%,
+      transparent 100%
+    );
+    pointer-events: none;
   }
 
   .dynamic-title {
@@ -228,38 +264,6 @@
   }
 
   /* =============
-     3D CUBE SIZING
-     ============= */
-  .cube-container {
-    width: 100px;
-    height: 100px;
-    perspective: 300px;
-  }
-
-  .side {
-    font-size: var(--font-size-sm);
-  }
-
-  .front {
-    transform: translateZ(50px);
-  }
-  .back {
-    transform: translateZ(-50px) rotateY(180deg);
-  }
-  .top {
-    transform: rotateX(90deg) translateZ(50px);
-  }
-  .bottom {
-    transform: rotateX(-90deg) translateZ(50px);
-  }
-  .left {
-    transform: rotateY(-90deg) translateZ(50px);
-  }
-  .right {
-    transform: rotateY(90deg) translateZ(50px);
-  }
-
-  /* =============
      MODAL RESPONSIVE
      ============= */
   .project-modal-content {
@@ -322,6 +326,10 @@
   .card {
     padding: var(--spacing-lg);
   }
+}
+
+.featured-projects {
+  gap: var(--spacing-lg);
 }
 
 /* ==========================================================================
@@ -393,10 +401,6 @@
     animation-iteration-count: 1;
     transition-duration: 0.01ms;
   }
-
-  .cube {
-    animation: none;
-  }
 }
 
 /* =============
@@ -450,11 +454,6 @@ button:active,
 
   .card {
     min-height: 100px;
-  }
-
-  .cube-container {
-    width: 50px;
-    height: 50px;
   }
 }
 

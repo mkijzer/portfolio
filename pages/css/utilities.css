@@ -1,0 +1,28 @@
+/* ==========================================================================
+    UTILITY CLASSES
+    ========================================================================== */
+
+/* Cursor - Hidden on mobile */
+.cursor {
+  display: none;
+}
+
+/* Footer */
+.site-footer {
+  width: 100%;
+  padding: var(--spacing-xl) var(--spacing-base);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-radius: var(--border-radius);
+  border: var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  margin-top: var(--spacing-xl);
+  text-align: center;
+}
+
+.footer-content p {
+  color: var(--text-secondary);
+  font-size: var(--font-size-base);
+  margin: 0;
+}
